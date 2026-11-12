@@ -1,91 +1,80 @@
 # Social Source Access Assessment — NVIDIA Q3 FY2027 Pilot
 
 **Assessment date:** 2026-11-12  
-**Project:** Social Arbitrage Scanner  
-**Status:** `spec_ready` for owner review; no collection implementation authorized or started.  
-**Budget constraint:** free or already available access only.  
-**Current access state:** user reports no social APIs configured. This review did not verify any API credentials, account approval, or connected social data source.
+**Declared use:** Personal, non-commercial research.  
+**Budget:** Zero cost or valid existing access only.  
+**Status:** spec_ready for owner review; implementation not authorized or started.  
+**Access state:** User reports no social APIs configured. No credentials, approvals, entitlements, or source connections were verified.
 
 ## Decision
 
-**Do not implement or run a social collector yet.** Keep the social evidence input marked `missing` until a source is authorized and connected. Do not substitute search-engine snippets, manual browsing, unofficial scrapers, or today's public posts for a historical social dataset.
+Keep social collection blocked; do not implement a collector yet. No zero-cost social API entitlement is currently established for this project. Social evidence must remain missing, not neutral/zero and not a bullish or bearish signal. Do not scrape, automate browser access, use unofficial dumps, or bypass access controls.
 
-## Provider findings
-
-### X API
+## X API
 
 Official references:
-- API access and rules: https://help.x.com/en/rules-and-policies/x-api
-- Search Posts documentation: https://github.com/xdevplatform/docs/blob/main/x-api/posts/search/introduction.mdx
-- Developer platform: https://developer.x.com/
+- API overview/rules: https://help.x.com/en/rules-and-policies/x-api
+- Developer platform/pricing: https://developer.x.com/
+- Pricing documentation: https://docs.x.com/x-api/getting-started/pricing
+- Developer guidelines: https://github.com/xdevplatform/docs/blob/main/developer-guidelines.mdx
 
-The official Search Posts documentation describes:
-- recent search for the last 7 days, available to developers;
-- full-archive search back to 2006, available to pay-per-use and Enterprise customers;
-- developer account, Project/App, and keys/tokens as prerequisites.
+The current official developer platform lists post reads at $0.005 per resource fetched under credit-based pay-per-use. Free scaled access is described for qualifying public-utility apps; this project has not been shown to qualify. Recent search cannot reconstruct historical capture timestamps, and full-archive access is not established as free.
 
-**What this means for this pilot:** no X API is configured. The official documentation does not establish that this specific project currently has approved access or that full historical backfill is free. Recent-only access, even if available after account setup, cannot reconstruct social posts and retrieval state for decision timestamps before collection began. Exact pricing/credit terms and developer-console eligibility remain unverified.
+**Decision:** do not call the API under the strict zero-cost rule unless the owner confirms an already-valid approved entitlement or credits covering the planned reads. No payment card, purchase, auto-recharge, or paid access without explicit approval.
 
-**Next gate:** check current account eligibility and endpoint pricing directly in the official developer console/docs. No API calls or credentials should be used until access, permitted use, retention, and budget are approved.
-
-### Reddit Data API
+## Reddit
 
 Official references:
-- Developer access guidance updated 2026-05-28: https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data
-- Data API Terms, last revised 2026-07-20: https://redditinc.com/policies/data-api-terms
-- Technical guidance: https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+- Developer access guidance (updated 2026-05-28): https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data
+- Reddit for Researchers (updated 2026-10-05): https://support.reddithelp.com/hc/en-us/articles/49381918834964-Reddit-for-Researchers-Program
+- Public Content Policy: https://support.reddithelp.com/hc/en-us/articles/26410290525844-Public-Content-Policy
 
-Reddit's guidance says API use requires registered/authenticated access and compliance with its terms. It says commercial use requires explicit permission and a contract, while research use is directed to Reddit for Researchers. The terms also restrict use of user content for machine-learning/model training without explicit permission.
+Reddit's current guidance says the only authorized avenue for research using Reddit data is Reddit for Researchers (RFR). RFR is free for approved non-commercial academic projects but requires accredited-university affiliation, institutional email, a detailed proposal, ethics review/exemption and institutional sponsor. Its dataset is delayed by six months and excludes deleted content.
 
-**What this means for this pilot:** approval and permitted use have not been established. The project's eventual commercial status is not confirmed, so we must not assume non-commercial eligibility. No Reddit data collection is authorized by this assessment.
+The owner has declared personal non-commercial research, but no qualifying academic affiliation or sponsor is established. RFR eligibility is therefore not established. Do not use ordinary Data API signup or scraping as a workaround. No Reddit collection unless eligibility and approval are established.
 
-**Next gate:** owner clarifies intended use (personal non-commercial research vs product/business), then pursues the appropriate official access/review route. Until approval, no scraping, unofficial dumps, or alternate accounts to bypass access restrictions.
-
-### Stocktwits
+## Stocktwits
 
 Official references:
 - Developer registration: https://api.stocktwits.com/developers
 - Terms: https://stocktwits.com/about/legal/terms/
 
-The developer page says new API registrations are not currently being accepted while APIs, documentation, and terms are reviewed. The terms prohibit automated scraping/data extraction unless expressly authorized.
+New API registrations are currently not accepted according to the developer page. Terms prohibit automated extraction unless expressly authorized. Exclude from phase one.
 
-**Decision:** exclude from phase one. Recheck only if an authorized access route becomes available.
+## Current source status
 
-## Point-in-time constraints
+| Source | Zero-cost route established? | Decision |
+|---|---|---|
+| X API | No; existing entitlement/credits not checked or confirmed | Block until verified |
+| Reddit | No; RFR eligibility and approval not established | Block |
+| Stocktwits | No new API registrations currently | Exclude |
+| Social posts/metrics in this project | None verified | Mark missing |
 
-- The NVIDIA event is scheduled for 2026-11-17, approximately 1:20 p.m. Pacific / 4:20 p.m. Ecuador, subject to official updates.
-- The desired pre-event dataset begins before the event, but no social API was configured during the earlier period.
-- Data first collected later must not be backdated. It can support only snapshots at or after its verified retrieval/availability time.
-- For every future record, preserve `published_at`, `event_at`, `retrieved_at`, original timezone string, `decision_timestamp`, source URL/ID, query, access tier, terms version, verification state, duplicate/reshare relationships, and known limitations.
-- Distinguish a platform's post creation time from when the collector first observed it.
-- Record corrections as new versions; do not rewrite prior snapshots.
-- Do not store or reuse content beyond platform permissions or retention/deletion rules.
+## NVIDIA pilot and point-in-time integrity
 
-## Missing data and non-claims
+- This review collected no social posts or metrics; it is an access-policy review only.
+- No historical social dataset has been verified for earlier pre-event decision timestamps.
+- Data first collected later must not be backdated. Keep publication, event, retrieval/first-seen, original timezone, UTC timestamp and decision timestamp separate.
+- Record source ID/URL, query, access tier, terms version, parser version, duplicate/repost/quote relationships, verification state and coverage limitations where permitted.
+- Preserve corrections as new versions. Follow provider deletion, retention, redistribution and model-use rules.
+- Missing social input must propagate as missing/insufficient_evidence, never as neutral sentiment or zero attention.
 
-- Social posts collected by this project: **none verified**.
-- Social sentiment or post-volume metrics: **not available**.
-- Author diversity, coordination signals, and narrative novelty: **not measured**.
-- Historical social coverage for earlier pre-event decision timestamps: **not established**.
-- API permissions, access tiers, and credentials: **not configured/verified**.
-- No bullish/bearish signal or numeric score should be generated from absent social evidence.
+## Next technical steps
 
-## Recommended next steps
-
-1. Owner confirms intended use: personal/non-commercial research or possible commercial product.
-2. Owner confirms zero-cost-only means no paid X archive or other paid tier.
-3. Check whether an approved X developer app already exists; if not, assess eligibility and current terms. Do not assume historical full-archive access is free.
-4. For Reddit, use the official access/review route appropriate to the confirmed use case.
-5. After a source is approved, define a small collection scope, retention policy, duplicate rules, and a testable acceptance checklist.
-6. Only after explicit owner approval, implement a source adapter and prospective capture. Historical evaluation remains limited to evidence whose availability by each decision timestamp can be demonstrated.
+1. Access check only: owner may inspect their X developer console for an approved app and valid free entitlement/credits. Do not share credentials in chat or buy credits.
+2. If no qualifying X entitlement exists, leave X blocked and proceed without social data under the zero-cost constraint.
+3. Do not apply to Reddit RFR unless academic eligibility, sponsorship and ethics requirements can genuinely be met.
+4. Keep Stocktwits excluded until an authorized API route opens.
+5. Continue specification work only: fields, duplicate/repost handling, missing-data propagation, deletion/retention handling and acceptance tests.
+6. Before coding, present the proposed adapter design, $0 cost proof, access evidence and acceptance tests for explicit owner approval.
 
 ## Acceptance criteria before implementation
 
-- [ ] Authorized access is documented for each enabled source.
-- [ ] Intended use and any commercial permission requirements are resolved.
-- [ ] Free-tier and rate limits are documented; paid requests are disabled.
-- [ ] Point-in-time timestamps and first-seen retrieval times are distinct.
-- [ ] Duplicate/syndication/repost relationships can be represented without counting copies as independent evidence.
-- [ ] Deleted content and retention rules have a compliant handling plan.
-- [ ] Missing social data propagates as `missing/insufficient_evidence`, never as neutral sentiment or zero volume.
+- [ ] Approved source access is documented and permitted for this use.
+- [ ] Planned use costs $0; no paid fallback or auto-recharge is enabled.
+- [ ] Endpoint limits, retention, deletion, model-use and redistribution terms are documented.
+- [ ] Publication, event, retrieval/first-seen and decision timestamps are distinct.
+- [ ] Duplicates, syndications, reposts and quotes are not counted as independent corroboration.
+- [ ] Missing social data propagates as missing/insufficient_evidence.
+- [ ] Historical data is used only if availability by each decision timestamp can be demonstrated.
 - [ ] Owner approves the design before implementation.
