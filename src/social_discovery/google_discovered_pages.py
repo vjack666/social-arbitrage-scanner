@@ -8,15 +8,17 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+import ipaddress
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import socket
 import sys
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote_plus, urljoin, urlparse
-from urllib.request import Request, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 import urllib.robotparser
 
 USER_AGENT = "SocialArbitrageScannerResearch/0.1 (+personal non-commercial research)"
@@ -33,6 +35,46 @@ def google_search_url(query: str) -> str:
     return "https://www.google.com/search?q=" + quote_plus(query)
 
 
+def _validate_public_url(url: str) -> None:
+    """Reject non-HTTP URLs, credentials, and hosts resolving to non-public IPs."""
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+        raise ValueError(f"Only absolute HTTP(S) URLs are allowed: {url!r}")
+    if parsed.username is not None or parsed.password is not None:
+        raise ValueError("URLs containing embedded credentials are not allowed")
+    host = parsed.hostname.rstrip(".").lower()
+    if host == "localhost" or host.endswith(".localhost") or host.endswith(".local"):
+        raise ValueError("Local hostnames are not allowed")
+    try:
+        literal_ip = ipaddress.ip_address(host)
+    except ValueError:
+        literal_ip = None
+    if literal_ip is not None:
+        if not literal_ip.is_global:
+            raise ValueError("Non-public IP addresses are not allowed")
+        return
+    try:
+        addresses = {item[4][0] for item in socket.getaddrinfo(host, parsed.port or (443 if parsed.scheme == "https" else 80))}
+    except OSError as exc:
+        raise ValueError(f"Could not resolve public hostname: {host}") from exc
+    if not addresses or any(not ipaddress.ip_address(address.split("%")[0]).is_global for address in addresses):
+        raise ValueError("Hostname resolves to a non-public IP address")
+
+
+class _PublicRedirectHandler(HTTPRedirectHandler):
+    """Re-check every redirect target to reduce server-side request forgery risk."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        target = urljoin(req.full_url, newurl)
+        _validate_public_url(target)
+        return super().redirect_request(req, fp, code, msg, headers, target)
+
+
+def _open_public(request: Request):
+    _validate_public_url(request.full_url)
+    return build_opener(_PublicRedirectHandler()).open(request, timeout=TIMEOUT_SECONDS)
+
+
 class _PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -45,28 +87,30 @@ class _PageParser(HTMLParser):
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {k.lower(): (v or "") for k, v in attrs}
-        if tag.lower() in SKIP_TAGS:
+        tag = tag.lower()
+        if tag in SKIP_TAGS:
             self._skip_depth += 1
-        if tag.lower() == "title":
+        if tag == "title":
             self._in_title = True
-        if tag.lower() == "meta":
+        if tag == "meta":
             key = (values.get("property") or values.get("name") or values.get("itemprop")).lower()
             value = values.get("content", "").strip()
             if key and value:
                 self.meta.setdefault(key, value)
-        if tag.lower() == "link" and "canonical" in values.get("rel", "").lower():
+        if tag == "link" and "canonical" in values.get("rel", "").lower():
             href = values.get("href", "").strip()
             if href:
                 self.canonical = href
 
     def handle_endtag(self, tag: str) -> None:
-        if tag.lower() == "title":
+        tag = tag.lower()
+        if tag == "title":
             self._in_title = False
-        if tag.lower() in SKIP_TAGS and self._skip_depth:
+        if tag in SKIP_TAGS and self._skip_depth:
             self._skip_depth -= 1
 
     def handle_data(self, data: str) -> None:
-        cleaned = re.sub(r"\\s+", " ", data).strip()
+        cleaned = re.sub(r"\s+", " ", data).strip()
         if not cleaned:
             return
         if self._in_title:
@@ -90,7 +134,7 @@ def parse_html(html: str, page_url: str) -> dict[str, Any]:
         or ""
     )
     canonical = urljoin(page_url, parser.canonical) if parser.canonical else page_url
-    text = re.sub(r"\\s+", " ", " ".join(parser.text_parts)).strip()
+    text = re.sub(r"\s+", " ", " ".join(parser.text_parts)).strip()
     return {
         "url": page_url,
         "canonical_url": canonical,
@@ -116,19 +160,17 @@ def _robots_allows(url: str) -> bool:
     rp.set_url(robots_url)
     try:
         request = Request(robots_url, headers={"User-Agent": USER_AGENT})
-        with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+        with _open_public(request) as response:
             raw = response.read(256_000).decode("utf-8", errors="replace")
         rp.parse(raw.splitlines())
         return rp.can_fetch(USER_AGENT, url)
-    except (HTTPError, URLError, TimeoutError, OSError):
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError):
         # Fail closed: if access rules cannot be checked, skip the page.
         return False
 
 
 def read_public_page(url: str) -> dict[str, Any]:
-    parsed = urlparse(url)
-    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
-        raise ValueError(f"Only absolute HTTP(S) URLs are allowed: {url!r}")
+    _validate_public_url(url)
     if not _robots_allows(url):
         return {
             "url": url,
@@ -139,7 +181,7 @@ def read_public_page(url: str) -> dict[str, Any]:
         }
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
     try:
-        with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+        with _open_public(request) as response:
             content_type = response.headers.get_content_type()
             if content_type not in {"text/html", "application/xhtml+xml"}:
                 return {
@@ -158,7 +200,7 @@ def read_public_page(url: str) -> dict[str, Any]:
                 result["status"] = "partial"
                 result["evidence_note"] = "Content truncated at configured byte limit; partial evidence only."
             return result
-    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
         return {
             "url": url,
             "retrieved_at": datetime.now(timezone.utc).isoformat(),
@@ -186,7 +228,16 @@ def main(argv: list[str] | None = None) -> int:
     results: list[dict[str, Any]] = []
     seen: set[str] = set()
     for url in args.url:
-        result = read_public_page(url)
+        try:
+            result = read_public_page(url)
+        except ValueError as exc:
+            result = {
+                "url": url,
+                "retrieved_at": datetime.now(timezone.utc).isoformat(),
+                "status": "blocked",
+                "content": "",
+                "evidence_note": str(exc),
+            }
         key = result.get("canonical_url") or result.get("url")
         if key in seen:
             continue
