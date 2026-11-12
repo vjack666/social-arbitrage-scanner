@@ -1,6 +1,10 @@
 import unittest
 
-from src.social_discovery.google_discovered_pages import google_search_url, parse_html
+from src.social_discovery.google_discovered_pages import (
+    _validate_public_url,
+    google_search_url,
+    parse_html,
+)
 
 
 class GoogleDiscoveryTests(unittest.TestCase):
@@ -12,13 +16,15 @@ class GoogleDiscoveryTests(unittest.TestCase):
     def test_extracts_metadata_canonical_and_visible_text(self):
         html = """
         <html><head>
-          <title>Example NVIDIA report</title>
+          <title>Example   NVIDIA
+          report</title>
           <meta property="og:description" content="Reported supplier delay">
           <meta property="article:published_time" content="2026-11-12T09:00:00-05:00">
           <link rel="canonical" href="/story/nvidia">
           <script>SHOULD_NOT_APPEAR</script>
         </head><body><nav>Navigation noise</nav>
-        <main><p>Reported supplier delay. This is an allegation, not a confirmed fact.</p></main>
+        <main><p>Reported   supplier
+        delay. This is an allegation, not a confirmed fact.</p></main>
         </body></html>
         """
         result = parse_html(html, "https://example.com/news")
@@ -29,14 +35,38 @@ class GoogleDiscoveryTests(unittest.TestCase):
         self.assertIn("Reported supplier delay.", result["content"])
         self.assertNotIn("SHOULD_NOT_APPEAR", result["content"])
         self.assertNotIn("Navigation noise", result["content"])
+        self.assertNotIn("  ", result["content"])
         self.assertEqual(result["status"], "partial")
 
     def test_missing_publication_date_is_not_invented(self):
-        result = parse_html("<html><title>Short page</title><body>Only a few words.</body></html>",
-                            "https://example.com/short")
+        result = parse_html(
+            "<html><title>Short page</title><body>Only a few words.</body></html>",
+            "https://example.com/short",
+        )
         self.assertIsNone(result["published_at"])
         self.assertEqual(result["status"], "partial")
         self.assertTrue(result["retrieved_at"].endswith("+00:00"))
+
+    def test_rejects_private_ip_targets(self):
+        for url in (
+            "http://127.0.0.1/admin",
+            "http://10.0.0.8/",
+            "http://192.168.1.2/",
+            "http://[::1]/",
+        ):
+            with self.subTest(url=url):
+                with self.assertRaises(ValueError):
+                    _validate_public_url(url)
+
+    def test_rejects_non_http_and_embedded_credentials(self):
+        for url in (
+            "file:///etc/passwd",
+            "https://user:password@example.com/private",
+            "https:///missing-host",
+        ):
+            with self.subTest(url=url):
+                with self.assertRaises(ValueError):
+                    _validate_public_url(url)
 
 
 if __name__ == "__main__":
