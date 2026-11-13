@@ -112,7 +112,7 @@
 - Any hypothesis that the transition will change customer commitments, strategy, product roadmaps, or earnings guidance is untested. NVIDIA's stated expectation of operational continuity is a company statement, not independent proof of future outcomes.
 
 ### Macro and missing data
-- The U.S. Bureau of Labor Statistics calendar lists October 2026 Producer Price Index release for Nov 13 at 8:30 a.m. Eastern Time (8:30 a.m. Ecuador time; both UTC−5 on this date). At this run's 8:49 a.m. Ecuador decision cutoff, the scheduled release time had passed; however, this collection did not retrieve the actual PPI results, so no value or surprise is recorded.
+- The U.S. Bureau of Labor Statistics calendar lists the October 2026 Producer Price Index release for Nov 13 at 8:30 a.m. Eastern Time (8:30 a.m. Ecuador time; both UTC−5 on this date). At the 8:49 a.m. Ecuador cutoff, the scheduled time had passed, but the official BLS PPI landing page still displayed September 2026 as the latest numbers and November 13 as the next release. The October results therefore were not verified as publicly posted on the official page during this run; no October value or surprise is recorded. This may reflect a publication delay or page refresh lag, not a conclusion about whether release occurred elsewhere.
 - No authorized social dataset is available; social evidence remains missing.
 - No documented provider license/terms for systematic storage or redistribution were verified.
 - No validated API ingestion, parser, automated deduplication pipeline, or quantitative sentiment score was run.
