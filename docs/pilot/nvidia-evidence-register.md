@@ -82,6 +82,68 @@
 - [ ] Social access authorization verified.
 - [ ] NVDA versus index/sector time series collected and validated.
 
+## Snapshot log — 2026-11-13
+
+**Decision timestamp:** 2026-11-13T08:49:22-05:00 (America/Guayaquil; 13:49:22Z). Sources whose availability by this cutoff cannot be established are excluded from this snapshot, even if currently indexed with a Nov 13 date.
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261113-SEC-001 | SEC filing | SEC EDGAR | NVIDIA Form 8-K, Item 5.02: board accepted Jensen Huang's resignation; Colette Kress appointed interim CEO; Harvey C. Jones appointed board chair | https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm | Filing/report date 2026-11-12; exact SEC acceptance/publication time not shown on opened filing page | Filing states board action occurred 2026-11-11; no clock time given | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | primary_source | CEO_TRANSITION_20261112 | yes — SEC filing opened and contents checked | verified_fact | Accession identifier in URL: 0001045810-26-000082. The SEC filing lists date of earliest event reported as Nov 11, while the NVIDIA newsroom announcement is dated Nov 12. This is a date distinction, not necessarily a contradiction: board action date and public announcement date differ. Do not infer exact public availability time from the filing date alone. | evidence-register-v0.3 |
+| NVDA-20261112-MARKET-002 | market data | Yahoo Finance historical prices | NVDA Nov 12 regular-session close $166.19; open $151.01, high $167.14, low $148.80; displayed volume 742,789,000 | https://finance.yahoo.com/quote/NVDA/history/ | Historical session row dated 2026-11-12; exact row publication time unavailable | Regular-session close 4:00 p.m. ET (21:00Z / 16:00 Ecuador) | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | corroborated | NVDA_CLOSE_20261112 | yes — historical session had closed before cutoff | measurement | Secondary public historical quote page; systematic storage/redistribution terms not verified. A second quote aggregator reports close $166.19 and volume 747,979,146, so price agrees but volume differs by about 5.19M shares. Preserve each provider's value; no independent exchange tape validation in this run. | evidence-register-v0.3 |
+| QQQ-20261112-MARKET-001 | market data | Yahoo Finance historical prices | Invesco QQQ Trust close $688.17; open $680.32, high $694.56, low $679.83; displayed volume 36,718,000 | https://finance.yahoo.com/quote/QQQ/history/ | Historical session row dated 2026-11-12; exact row publication time unavailable | Regular-session close 4:00 p.m. ET | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | measurement | QQQ_CLOSE_20261112 | yes — historical session had closed before cutoff | measurement | QQQ is an ETF proxy for Nasdaq-100 exposure, not the index itself. Historical price page; terms for systematic reuse not verified. | evidence-register-v0.3 |
+| SOXX-20261112-MARKET-001 | market data | Yahoo Finance historical prices | iShares Semiconductor ETF close $154.99; open $150.47, high $157.63, low $150.03; displayed volume 52,094,000 | https://finance.yahoo.com/quote/SOXX/history/ | Historical session row dated 2026-11-12; exact row publication time unavailable | Regular-session close 4:00 p.m. ET | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | measurement | SOXX_CLOSE_20261112 | yes — historical session had closed before cutoff | measurement | Sector ETF proxy, not a pure semiconductor index. Historical price page; terms for systematic reuse not verified. | evidence-register-v0.3 |
+| NVDA-20261113-NEWS-001 | news article | Reuters | Article on Colette Kress as interim CEO and reported leadership/strategy issues | https://www.reuters.com/business/colette-kress-cfo-who-challenged-huangs-bets-is-nvidias-interim-ceo-2026-11-13/ | Search result dates it 2026-11-13; exact publication time unavailable | Not applicable; contains reported claims and analysis | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | excluded | CEO_TRANSITION_20261112 | no — cannot substantiate that this article was publicly available by the decision cutoff | reported_claim | Excluded under strict point-in-time rule. May be reviewed in a later snapshot if its publication time/availability is verified. Reported claims about strategy and relationships are not official company facts. | evidence-register-v0.3 |
+| NVDA-20261113-SOCIAL-001 | social data | Not collected | Authorized social-source evidence unavailable in this run | — | — | — | 2026-11-13T08:49:22-05:00 | 2026-11-13T08:49:22-05:00 | excluded | — | no — no authorized social API/data access verified | measurement | No social sentiment, post counts, author-diversity metrics, or engagement metrics collected. | evidence-register-v0.3 |
+
+## Evidence-quality review — 2026-11-13
+
+### Confirmed facts
+- The SEC Form 8-K was found and opened. It reports the board action on Nov 11, gives Nov 11 as the earliest event date, and is signed/dated Nov 12. This independently verifies the transition through a regulatory filing in addition to NVIDIA's official release. It does not establish the precise public-disclosure time.
+- NVIDIA's official newsroom release dated Nov 12 continues to schedule results for Nov 17 at approximately 1:20 p.m. PT and the call at 2:00 p.m. PT.
+- The Nov 12 regular-session close was $166.19 for NVDA, $688.17 for QQQ, and $154.99 for SOXX according to the cited historical quote pages.
+
+### Measurement and comparison
+- NVDA closed down 4.34% on Nov 12 according to the historical quote page; QQQ closed down approximately 0.32% and SOXX down approximately 0.26% according to their respective displayed closing changes. This is consistent with NVDA underperforming these two proxies on that session; it does not establish causality or predict the earnings reaction.
+- NVDA volume was unusually high in the displayed vendor data (about 743–748M shares across two quote pages). Because provider values differ and no exchange-level tape or licensing terms were verified, treat volume as indicative and vendor-specific.
+- The Nov 12 close is post-announcement market reaction to the leadership news, so it is valid as a new Nov 13 pre-earnings snapshot observation, but must not be inserted retroactively into the Nov 12 decision snapshot.
+
+### Reported claims and hypotheses
+- Allegations about espionage, personal relationships, or chip shipments are not established by the SEC filing or the official transition release. They remain separate reported claims and require claim-specific corroboration.
+- Any hypothesis that the transition will change customer commitments, strategy, product roadmaps, or earnings guidance is untested. NVIDIA's stated expectation of operational continuity is a company statement, not independent proof of future outcomes.
+
+### Macro and missing data
+- The U.S. Bureau of Labor Statistics calendar lists October 2026 Producer Price Index release for Nov 13 at 8:30 a.m. Eastern Time (5:30 a.m. Ecuador time). At this run's 8:49 a.m. Ecuador decision cutoff, the scheduled release time had passed; however, this collection did not retrieve the actual PPI results, so no value or surprise is recorded.
+- No authorized social dataset is available; social evidence remains missing.
+- No documented provider license/terms for systematic storage or redistribution were verified.
+- No validated API ingestion, parser, automated deduplication pipeline, or quantitative sentiment score was run.
+
+### Point-in-time and duplicate controls
+- CEO transition records share duplicate group CEO_TRANSITION_20261112. The SEC filing and NVIDIA newsroom release are distinct primary records for the same event; they corroborate the transition but do not count as separate underlying events.
+- The Reuters article dated Nov 13 is excluded because its exact publication/availability time relative to the cutoff could not be verified.
+- The Nov 12 market close observations are newly added to this Nov 13 snapshot only; the earlier Nov 12 snapshot remains unchanged.
+
+## Next verification tasks
+1. Retrieve the actual BLS PPI release and record its exact publication time, headline/core values, revisions, and consensus comparison only where the source supports them.
+2. Verify the earnings schedule again against NVIDIA's official notice.
+3. Continue a vendor-separated NVDA/QQQ/SOXX time series and investigate the NVDA volume discrepancy.
+4. Document provider terms before treating market data as suitable for systematic ingestion or redistribution.
+5. Keep social evidence missing until authorized access and permitted use are documented.
+6. Keep earnings results and post-event evaluation in a separate dataset, not the pre-event snapshots.
+
+## Review checklist
+
+- [x] Primary NVIDIA source opened and URL checked.
+- [x] Publication date recorded; exact time left unspecified where the source does not display it.
+- [x] Timezone preserved for decision timestamps and market observation times.
+- [x] Event time kept separate from publication time.
+- [x] Snapshot cutoffs stated and prior snapshots retained.
+- [x] SEC Form 8-K retrieved and checked.
+- [x] Duplicate relationships recorded for the same underlying leadership event.
+- [ ] Actual PPI release values verified.
+- [ ] Market data provider terms reviewed for systematic storage/reuse.
+- [ ] Social access authorization verified.
+- [ ] NVDA versus index/sector time series fully validated.
+
 ## Important
 
-A page found today with a historical publication date can support a retrospective reconstruction only where its timestamp and historical availability can be substantiated. Label it as retrieved retrospectively, not as collected live at the time. Search snippets and inaccessible article bodies are partial evidence and must be marked accordingly.
+A page found later with a historical publication date can support retrospective reconstruction only where its timestamp and historical availability can be substantiated. Label it as retrieved retrospectively, not as collected live at the time. Search snippets and inaccessible article bodies are partial evidence and must be marked accordingly.
