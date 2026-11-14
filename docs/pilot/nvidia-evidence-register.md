@@ -147,3 +147,61 @@
 ## Important
 
 A page found later with a historical publication date can support retrospective reconstruction only where its timestamp and historical availability can be substantiated. Label it as retrieved retrospectively, not as collected live at the time. Search snippets and inaccessible article bodies are partial evidence and must be marked accordingly.
+
+
+## Snapshot log — 2026-11-14
+
+**Decision timestamp:** 2026-11-14T08:52:29-05:00 (America/Guayaquil; 13:52:29Z). Weekend review. The latest completed regular U.S. equity session is Friday, Nov 13. Market rows below are historical provider pages retrieved during this run; they are not live quotes. This snapshot includes only pages found accessible by this decision cutoff.
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261114-SEC-001 | SEC filing | SEC EDGAR | Form 8-K confirms board action dated Nov 11: resignation of Jensen Huang, interim CEO Colette Kress, Harvey C. Jones as chair | https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/0001045810-26-000082-index.htm | SEC accepted 2026-11-12 08:52:41 UTC (03:52:41 Ecuador); filed Nov 12 | Board action stated as Nov 11; effective immediately | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | primary_source | CEO_TRANSITION_20261112 | yes | verified_fact | Regulatory primary source. The acceptance timestamp is explicitly UTC in SEC header; converted to Ecuador time (UTC−5). Confirms official transition, not the truth of allegations in unrelated news reports. | evidence-register-v0.4 |
+| NVDA-20261114-COMPANY-001 | company release | NVIDIA Newsroom | Earnings release remains scheduled for Nov 17 at approximately 1:20 p.m. PT; call at 2:00 p.m. PT | https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition | Page dated 2026-11-12; exact publication time not displayed | Planned results release Nov 17 approx. 1:20 p.m. PT (4:20 p.m. Ecuador); call 2 p.m. PT (5 p.m. Ecuador) | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | primary_source | NVDA_Q3_FY27_EVENT | yes | verified_fact | Rechecked in this run. Schedule remains subject to official update. | evidence-register-v0.4 |
+| PPI-20261114-MACRO-001 | macro/context | U.S. Bureau of Labor Statistics | October 2026 PPI: final demand +0.3% m/m seasonally adjusted; +6.5% y/y unadjusted; final demand less foods, energy, and trade services +0.5% m/m and +4.9% y/y | https://www.bls.gov/news.release/archives/ppi_11132026.htm | Release states embargo until 2026-11-13 08:30 a.m. ET (13:30 UTC / 08:30 Ecuador) | October 2026 price data | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | primary_source | US_PPI_OCT_2026 | yes — official archived release confirms publication date/time | measurement | Corrects the previous run's open verification task: this release was subsequently found on the official BLS archive. No consensus estimate is recorded because it was not verified from an authoritative source in this run. Macro context only, not a direct NVDA signal. | evidence-register-v0.4 |
+| NVDA-20261113-MARKET-001 | market data | StockAnalysis historical prices | NVDA close $162.85; open $169.91, high $170.00, low $158.39; volume 366,463,971 shares | https://stockanalysis.com/stocks/nvda/history/ | Session date 2026-11-13; provider publication timestamp not shown | Regular session close 4:00 p.m. ET (21:00 UTC / 16:00 Ecuador) | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | measurement | NVDA_CLOSE_20261113 | yes | measurement | Public historical page. Yahoo Finance shows same close but volume 363,819,700, a difference of about 2.64M shares. Preserve vendor-specific volume values; no exchange tape validation or provider license review was completed. | evidence-register-v0.4 |
+| QQQ-20261113-MARKET-001 | market data | Yahoo Finance historical prices | QQQ close $679.89; intraday OHLC shown on provider page | https://finance.yahoo.com/quote/QQQ/history/ | Session date 2026-11-13; provider publication timestamp not shown | Regular session close 4:00 p.m. ET | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | measurement | QQQ_CLOSE_20261113 | yes | measurement | QQQ is an ETF proxy for Nasdaq-100, not the index itself. The English page's historical row was not present in the retrieved snippet; the displayed close is visible in the provider page header. Vendor access terms for systematic reuse remain unverified. | evidence-register-v0.4 |
+| SOXX-20261113-MARKET-001 | market data | Yahoo Finance historical prices | SOXX close $149.30; open $153.32, high $154.37, low $144.64; volume 47,793,700 shares | https://finance.yahoo.com/quote/SOXX/history/ | Session date 2026-11-13; provider publication timestamp not shown | Regular session close 4:00 p.m. ET | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | measurement | SOXX_CLOSE_20261113 | yes | measurement | Semiconductor-sector ETF proxy, not a pure index. Provider terms for systematic reuse remain unverified. | evidence-register-v0.4 |
+| NVDA-20261113-NEWS-001 | news article | Reuters | Reported sector selloff and uncertainty about NVIDIA leadership and financing strategy | https://www.reuters.com/business/neoclouds-ai-stocks-slide-again-nvidia-turmoil-rattles-sector-2026-11-13/ | Dated 2026-11-13; exact publication time not displayed in accessible result | U.S. market session 2026-11-13; article reports Nasdaq-100 down 2% and semiconductor index down 5.1% | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | corroborated for general market narrative; article body not fully inspected | CEO_TRANSITION_20261112; AI_SECTOR_SELL_OFF_20261113 | yes as a dated secondary report available at retrieval; not independent confirmation of the CEO transition | reported_claim | Exact article publication time and full-body verification unavailable from the accessible result. Reported index moves are not independently validated here. Any allegation within this or related coverage remains a reported claim, not an established fact. | evidence-register-v0.4 |
+| NVDA-20261114-SOCIAL-001 | social data | Not collected | Authorized social-source evidence unavailable | — | — | — | 2026-11-14T08:52:29-05:00 | 2026-11-14T08:52:29-05:00 | excluded | — | no | measurement | No authorized social API access or license verified. No social sentiment, post counts, author-diversity or engagement metrics collected. | evidence-register-v0.4 |
+
+## Evidence-quality review — 2026-11-14
+
+### Confirmed facts
+- SEC EDGAR provides a primary Form 8-K for the transition (accession 0001045810-26-000082), accepted at 2026-11-12 08:52:41 UTC. NVIDIA's official newsroom release remains the controlling company source for confirming the transition and scheduled results event.
+- NVIDIA's official release still schedules Q3 FY2027 results for Nov 17 at approximately 1:20 p.m. Pacific and the earnings call at 2:00 p.m. Pacific.
+- BLS's archived official October PPI release states the embargo lifted at 8:30 a.m. ET on Nov 13. Final demand rose 0.3% m/m and 6.5% y/y; core-style final demand less foods, energy and trade services rose 0.5% m/m and 4.9% y/y. This resolves the previous snapshot's missing-PPI task, without retroactively changing that snapshot.
+- Historical market pages show Nov 13 closes: NVDA $162.85, QQQ $679.89 and SOXX $149.30. These are provider-reported close values, not a validated licensed market dataset.
+
+### Measurements and contradictions
+- NVDA's Nov 13 close was down 2.01% per the historical pages; SOXX was down 3.67%. QQQ's close of $679.89 versus $688.17 on Nov 12 implies a decline of about 1.20%. These are descriptive price changes only; they do not establish causality.
+- NVDA volume differs between StockAnalysis (366.46M) and Yahoo Finance (363.82M). Keep both values and investigate conventions; do not average.
+- Reuters describes broad AI/semiconductor weakness and questions about vendor financing. Because the full article body and exact publication timestamp were not available from the retrieved result, use only as a secondary reported narrative, not as independently verified numerical evidence.
+- Some media reports contain allegations involving personal relationships, espionage or chip shipments. Those remain distinct reported claims. Neither the SEC filing nor NVIDIA's official transition release establishes them as facts.
+
+### Point-in-time controls and limitations
+- Decision cutoff is 2026-11-14T08:52:29-05:00. Friday's completed regular-session market close is eligible as the latest pre-event snapshot observation. It must not be inserted into the earlier Nov 12 or Nov 13 snapshots.
+- The PPI result was published Nov 13 at 08:30 ET and was accessible during this Nov 14 run. The earlier Nov 13 run's failure to find it is preserved as a collection gap; this entry is a later correction, not a rewrite of the earlier state.
+- Social evidence is missing because no authorized source access was verified.
+- Market provider licensing terms for systematic storage/redistribution remain unverified; no API ingestion or automated sentiment score was run.
+- No numeric bullish/bearish score or trade recommendation is produced.
+
+## Next verification tasks — 2026-11-14
+1. Recheck NVIDIA's official earnings schedule before Nov 17.
+2. Continue provider-separated NVDA/QQQ/SOXX daily data; resolve volume differences against a documented exchange/provider source and review reuse terms.
+3. Check for new company filings and official statements, preserving publication/acceptance timestamps.
+4. Keep claims about espionage or chip shipments isolated until each has independent, credible evidence.
+5. Keep authorized social evidence marked missing unless access and permitted use are documented.
+6. Evaluate earnings results and post-event market reaction in a separate evaluation dataset after the event; never backfill them into these pre-event snapshots.
+
+## Review checklist — 2026-11-14
+
+- [x] NVIDIA primary release rechecked.
+- [x] SEC filing and acceptance timestamp verified.
+- [x] Official BLS October PPI release retrieved; previous gap corrected as a new dated record.
+- [x] Friday Nov 13 closes captured as provider-specific historical observations.
+- [x] Volume discrepancy preserved rather than blended.
+- [x] Snapshot cutoff and retrieval timezone recorded.
+- [ ] Provider terms for systematic market-data use verified.
+- [ ] Social access authorization verified.
+- [ ] Full Reuters article body and publication timestamp verified.
+- [ ] Sector/index price series validated from an authorized documented provider.
