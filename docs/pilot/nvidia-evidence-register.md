@@ -205,3 +205,38 @@ A page found later with a historical publication date can support retrospective 
 - [ ] Social access authorization verified.
 - [ ] Full Reuters article body and publication timestamp verified.
 - [ ] Sector/index price series validated from an authorized documented provider.
+
+
+## Snapshot addendum — Elon Musk commentary — 2026-11-14
+
+**Decision timestamp:** 2026-11-14T14:20:00-05:00 (America/Guayaquil; 19:20:00Z), based on the current run time supplied to the assistant. This is an addendum to the Nov 14 snapshot, not a rewrite of earlier snapshots. The items below are reported comments; no authorized X/social-data collection was performed.
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261114-MUSK-001 | news report of social post | Reuters | Musk said NVIDIA could lose “critical” deals without Jensen Huang, arguing that important arrangements depended on personal trust and were in some cases “a handshake with Jensen, not a written contract” | https://www.reuters.com/business/musk-says-nvidia-will-lose-critical-deals-without-jensen-huang-2026-11-14/ | 2026-11-14 14:50:01 UTC (09:50:01 Ecuador, UTC−5), as reported in the Reuters result | Musk's X post reported as occurring Saturday, Nov 14; exact original post time not independently verified | 2026-11-14T14:20:00-05:00 | 2026-11-14T14:20:00-05:00 | corroborated as a Reuters report; original post not independently accessed | MUSK_ON_HUANG_LEADERSHIP_20261114 | yes — Reuters result was available before cutoff | reported_claim | Musk's assessment/opinion, not verified evidence that contracts will be lost. Reuters is one underlying report; syndications of it are duplicates, not independent confirmation. NVIDIA/SEC primary sources describe a resignation; do not rewrite that as “ousted” absent primary evidence. No direct X collection or social metrics. | evidence-register-v0.5 |
+| NVDA-20261113-MUSK-002 | news report of social post | Yahoo Finance / cited article by Badar Shaikh | Musk replied “That would be an honor” to a suggestion that he hire Jensen Huang | https://finance.yahoo.com/technology/ai/articles/elon-musk-says-honor-hire-193005822.html | 2026-11-13 14:30 ET (19:30 UTC) as displayed by Yahoo Finance; exact original X post time reported as Nov 12, 2026 | X exchange reportedly occurred Nov 12; exact time not verified | 2026-11-14T14:20:00-05:00 | 2026-11-14T14:20:00-05:00 | secondary_report; quote reproduced by outlet, original post not independently accessed | MUSK_ON_HUANG_LEADERSHIP_20261114 | yes — secondary report was available before cutoff | reported_claim | This is an expression of willingness/opinion, not a formal job offer, employment negotiation, or confirmed hiring plan. The Yahoo item and any syndications of the same report must not be counted as independent sources. No authorized social data was collected. | evidence-register-v0.5 |
+| NVDA-20260925-MUSK-003 | news report of social post | The Motley Fool via Yahoo Finance | Musk reportedly said xAI/SpaceX's Colossus 2 could add substantial NVIDIA GPU capacity by year-end and described NVIDIA chips as the exclusive choice for SpaceX going forward | https://finance.yahoo.com/markets/stocks/articles/elon-musk-just-gave-nvidia-002000003.html | 2026-09-27 00:20 UTC approx. based on displayed Yahoo timestamp; underlying original post dates reported as Sep 25, exact post times not independently verified | Statements reportedly made Sep 25, 2026 | 2026-11-14T14:20:00-05:00 | 2026-11-14T14:20:00-05:00 | secondary_report; original post not independently accessed | MUSK_NVIDIA_DEMAND_CONTEXT_20260925 | yes — historical context only, published before this cutoff | reported_claim | Historical demand context, not proof of a binding purchase order, shipment, recognized revenue, or the company's Q3 FY2027 guidance. Musk leads companies that are NVIDIA customers and also has AI-compute interests; treat as interested-party commentary. Do not count reprints as independent confirmation. | evidence-register-v0.5 |
+
+### Elon Musk commentary — evidence-quality interpretation
+
+**Reported statements**
+- On Nov 14, Musk publicly criticized the leadership change in commercial terms: he argued that some important customer relationships depended on Jensen Huang's personal trust and could be at risk. Reuters reported the statement; the original X post was not independently retrieved in this run.
+- A separate report says Musk responded “That would be an honor” when a user suggested hiring Huang. This is not a formal offer or evidence of a hiring process.
+- Earlier commentary attributed to Musk described ambitious expansion of Colossus 2 and a preference for NVIDIA chips. This is potentially relevant demand context, but remains a customer/partner executive's public statement, not audited purchase or shipment data.
+
+**What it may mean for the pilot (inference, not fact)**
+- Leadership transition may introduce uncertainty around relationship-dependent customer commitments. This is a hypothesis to test against NVIDIA's official disclosures, subsequent customer statements, and disclosed revenue/customer concentration—not a confirmed loss of business.
+- Musk's reported positive comments and stated NVIDIA compute plans can be a countervailing qualitative demand signal, but cannot establish order size, timing, shipment completion, or revenue recognition.
+- These statements are not independent confirmations of one another: they concern related leadership/customer themes, and secondary outlets may reproduce the same underlying X posts.
+
+**Missing / limitations**
+- No authorized direct X access, API terms, original post IDs, full engagement counts, author-network data, or social sentiment dataset was collected.
+- Exact original X publication times were not verified. The Reuters report timestamp is used only as the news publisher's timestamp; it is not substituted for the original post time.
+- No numeric score or directional trading recommendation is derived from these comments.
+- Continue separating the official NVIDIA/SEC leadership record from unverified allegations about espionage or chip shipments. Musk's comments do not substantiate those allegations.
+
+### Next verification tasks
+1. Retrieve the original Musk X posts through an authorized access path and record post IDs, exact timestamps/timezones, edit/deletion state, and applicable access terms; otherwise retain the social-evidence-missing caveat.
+2. Search NVIDIA's official filings and earnings materials for customer concentration, commitments, demand visibility, and any disclosed risks related to leadership or customer relationships.
+3. Look for direct statements from NVIDIA and relevant customer companies; deduplicate articles that reproduce the same post.
+4. Keep all earnings results and post-event price action outside the pre-event evidence snapshot.
