@@ -240,3 +240,65 @@ A page found later with a historical publication date can support retrospective 
 2. Search NVIDIA's official filings and earnings materials for customer concentration, commitments, demand visibility, and any disclosed risks related to leadership or customer relationships.
 3. Look for direct statements from NVIDIA and relevant customer companies; deduplicate articles that reproduce the same post.
 4. Keep all earnings results and post-event price action outside the pre-event evidence snapshot.
+
+
+## Snapshot log — 2026-11-15 (Sunday review)
+
+**Decision timestamp:** 2026-11-15T09:24:19-05:00 (America/Guayaquil; 14:24:19Z). Weekend review; the latest completed regular U.S. equity session is Friday, Nov 13. No new weekend market close is represented. Sources were retrieved retrospectively during this run; do not describe them as continuously collected live data.
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261115-COMPANY-001 | company release | NVIDIA Newsroom | Q3 FY2027 results release scheduled for Nov 17 at approximately 1:20 p.m. PT; earnings call at 2:00 p.m. PT | https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873 | 2026-10-28; exact clock time not shown on release | Planned release Nov 17 approx. 1:20 p.m. PT (4:20 p.m. Ecuador); call 2:00 p.m. PT (5:00 p.m. Ecuador) | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | primary_source | NVDA_Q3_FY27_EVENT | yes | verified_fact | Official NVIDIA event notice rechecked. No later official schedule change found in this run; recheck again before event. | evidence-register-v0.6 |
+| NVDA-20261115-SEC-001 | SEC filing | SEC EDGAR | Form 8-K, accession 0001045810-26-000082, records board action dated Nov 11 and includes transition-related press release as Exhibit 99.1 | https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm | SEC accepted 2026-11-12 08:52:41 UTC (03:52:41 Ecuador); report dated Nov 12 | Board action Nov 11; public announcement Nov 12 | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | primary_source | CEO_TRANSITION_20261112 | yes | verified_fact | Supports transition chronology. The official NVIDIA transition release remains the controlling company announcement for the transition. Neither source establishes unrelated allegations about espionage or chip shipments. | evidence-register-v0.6 |
+| NVDA-20261115-MUSK-001 | news report of social post | Reuters | Elon Musk said NVIDIA could lose “critical” deals without Jensen Huang, arguing some relationships relied on personal trust and were “a handshake with Jensen, not a written contract” | https://www.reuters.com/business/musk-says-nvidia-will-lose-critical-deals-without-jensen-huang-2026-11-14/ | Reuters report dated Nov 14; search result does not provide an independently confirmed original X publication timestamp | Musk's post reportedly made Nov 14; exact original post time not verified | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | secondary_report | MUSK_ON_HUANG_LEADERSHIP_20261114 | yes as reported commentary, not as proof of contract losses | reported_claim | Reuters is the report source; direct X post was not accessed through an authorized API in this run. Musk did not identify the deals or quantify exposure in the reported remarks. This is an opinion/hypothesis, not disclosed contract evidence. Related reprints are not independent corroboration. | evidence-register-v0.6 |
+| NVDA-20261115-MUSK-002 | news report of social post/petition | The Washington Post | Report says Musk supported a petition calling for Jensen Huang to return as NVIDIA CEO and had said hiring Huang would be an honor | https://www.washingtonpost.com/business/2026/11/13/musk-joins-calls-jensen-huang-be-reinstated-ceo-nvidia/ | Dated Nov 13; exact publication time not established from accessible result | Report describes Musk's support on Friday Nov 13; original X timestamp not independently verified | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | secondary_report | MUSK_SUPPORT_HUANG_RETURN_20261113 | yes as reported commentary | reported_claim | The report does not establish that the board will reinstate Huang or that Musk has made a formal job offer. Petition claims/signature counts are not independently validated here. Original social posts were not directly collected. | evidence-register-v0.6 |
+| NVDA-20261115-MARKET-001 | market data | StockAnalysis historical prices | NVDA Nov 13 close $162.85; open $169.91, high $170.00, low $158.39; volume 366,463,971 shares | https://stockanalysis.com/stocks/nvda/history/ | Historical session row dated Nov 13; row publication time not shown | Regular-session close 4:00 p.m. ET (21:00 UTC / 16:00 Ecuador) | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | measurement | NVDA_CLOSE_20261113 | yes — latest completed session | measurement | Yahoo Finance reports the same close but volume 363,819,700. Values remain provider-specific; discrepancy about 2.64M shares unresolved. Provider terms for systematic storage/redistribution are still not documented. | evidence-register-v0.6 |
+| QQQ-20261115-MARKET-001 | market data | Yahoo Finance historical prices | QQQ Nov 13 close $679.89; volume 41,798,500 shares | https://finance.yahoo.com/quote/QQQ/history/ | Historical session row dated Nov 13; provider publication time not shown | Regular-session close 4:00 p.m. ET | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | measurement | QQQ_CLOSE_20261113 | yes — latest completed session | measurement | QQQ is an ETF proxy for Nasdaq-100 exposure, not the index itself. Market data licensing terms for systematic reuse remain unverified. | evidence-register-v0.6 |
+| SOXX-20261115-MARKET-001 | market data | Yahoo Finance historical prices | SOXX Nov 13 close $149.30; volume 47,793,700 shares | https://finance.yahoo.com/quote/SOXX/history/ | Historical session row dated Nov 13; provider publication time not shown | Regular-session close 4:00 p.m. ET | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | measurement | SOXX_CLOSE_20261113 | yes — latest completed session | measurement | SOXX is a semiconductor-sector ETF proxy, not a pure index. Provider terms for systematic reuse remain unverified. | evidence-register-v0.6 |
+| PPI-20261115-MACRO-001 | macro/context | U.S. Bureau of Labor Statistics | October 2026 PPI release: final demand +0.3% m/m seasonally adjusted and +6.5% y/y unadjusted; final demand less foods, energy, and trade services +0.5% m/m | https://www.bls.gov/news.release/archives/ppi_11132026.htm | Release scheduled/embargo lifted 2026-11-13 08:30 a.m. ET (13:30 UTC / 08:30 Ecuador) | October 2026 price observations | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | primary_source | US_PPI_OCT_2026 | yes | measurement | Official BLS archived release. No consensus comparison is added because a reliable, time-stamped consensus source was not verified. Macro context only, not a direct NVDA signal. | evidence-register-v0.6 |
+| NVDA-20261115-SOCIAL-001 | social data | Not collected directly | No authorized direct X/social dataset or API access verified | — | — | — | 2026-11-15T09:24:19-05:00 | 2026-11-15T09:24:19-05:00 | excluded | — | no | measurement | News reports quote or describe Musk's posts, but this is not direct social-source collection. No post IDs, exact original timestamps, engagement metrics, author-diversity measures, or social sentiment dataset were collected. | evidence-register-v0.6 |
+
+### Evidence-quality review — 2026-11-15
+
+**Confirmed facts**
+- NVIDIA's official notice still schedules the Q3 FY2027 release for Nov 17 at approximately 1:20 p.m. Pacific, with the call at 2:00 p.m. Pacific. The event time is planned, not an observed event.
+- The SEC Form 8-K and NVIDIA's official transition release document the leadership change. Board action date (Nov 11), company announcement date (Nov 12), and SEC acceptance time are distinct timestamps and must not be conflated.
+- The BLS archived October PPI release is available and records the release time and headline values described above.
+
+**Reported claims, inference, and hypotheses**
+- Musk's reported view that some deals could be at risk is an interested-party opinion. It does not establish that any customer has cancelled or renegotiated a contract.
+- Musk's reported support for a petition to reinstate Huang, and his reported “honor” response to hiring Huang, do not prove a formal offer, active negotiations, or a likely board decision.
+- A reasonable hypothesis is that relationship-dependent commitments could face uncertainty during a CEO transition. Testing it requires official company/customer statements, filings, or quantified disclosures; the comments alone are insufficient.
+- Reports about espionage, relationships, or chip shipments remain separate allegations and must not be upgraded to verified facts based on Musk's commentary or repeated news coverage.
+
+**Market context and limitations**
+- Latest completed session: Nov 13. NVDA closed at $162.85 (-2.01%), QQQ at $679.89 (-1.20%), and SOXX at $149.30 (-3.67%), according to provider pages. These are descriptive observations only; they do not prove cause or forecast the earnings reaction.
+- NVDA volume remains discrepant across public quote providers (StockAnalysis 366.46M; Yahoo Finance 363.82M). Do not average the values. No exchange-level consolidated tape or provider licensing review was completed.
+- The BLS PPI figures are verified from a primary source, but no point-in-time consensus estimate is included.
+- Social evidence remains missing in the strict data-collection sense: quoted posts in news coverage are not a substitute for authorized direct collection.
+
+**Point-in-time and deduplication**
+- Decision cutoff: 2026-11-15T09:24:19-05:00. Only information accessible by this cutoff is included in this snapshot.
+- The Nov 13 close is the latest completed regular session because Nov 14–15 are weekend dates; no new live market prices are inferred.
+- Reuters and other outlets repeating Musk's same X post are grouped by underlying topic/post and must not be counted as independent confirmations.
+- Earlier snapshots remain unchanged. This is an appended snapshot/correction, not a rewrite of prior knowledge states.
+
+### Next verification tasks
+1. Recheck NVIDIA's official results schedule before the Nov 17 release.
+2. Continue recording NVDA/QQQ/SOXX observations by provider; verify market-data reuse terms and investigate the NVDA volume discrepancy against a documented exchange/provider source.
+3. Verify any new company/SEC filings and retain separate publication, event, retrieval, and decision timestamps.
+4. Seek authorized direct access to the original Musk posts; until then, keep social evidence marked missing and treat press quotations as secondary reports.
+5. Test the customer-relationship hypothesis only against independently sourced company/customer disclosures, not repetition of Musk's opinion.
+6. Keep the earnings release and post-event price reaction in a separate evaluation dataset. Do not add them to pre-event snapshots.
+
+### Review checklist — 2026-11-15
+- [x] Official NVIDIA event notice rechecked.
+- [x] SEC transition filing linked to prior verified record.
+- [x] Musk commentary separated into reported claims and hypotheses.
+- [x] Latest completed market session captured with vendor-specific volume caveat.
+- [x] Official BLS PPI source retained.
+- [x] Snapshot cutoff, timezone, and weekend market-session limitation recorded.
+- [ ] Direct social-source access and terms verified.
+- [ ] Market data provider terms documented.
+- [ ] NVDA volume discrepancy reconciled against a documented source.
+- [ ] Post-event evaluation kept separate.
