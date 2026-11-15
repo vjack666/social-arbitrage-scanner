@@ -302,3 +302,40 @@ A page found later with a historical publication date can support retrospective 
 - [ ] Market data provider terms documented.
 - [ ] NVDA volume discrepancy reconciled against a documented source.
 - [ ] Post-event evaluation kept separate.
+
+
+## Research addendum — Colette Kress public comments and reported internal message — 2026-11-15
+
+**Decision timestamp:** 2026-11-15T10:11:00-05:00 (America/Guayaquil; 15:11:00Z). This addendum records material retrieved in this run. It does not alter prior snapshots. The official NVIDIA announcement is the primary source for Kress's public quote; press reports about her internal message and prior disagreements are secondary reporting.
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261115-KRESS-001 | company release / executive quote | NVIDIA Newsroom | Kress said NVIDIA's strength is its people, committed to building on the foundation created by Jensen Huang, continuing to advance accelerated computing and AI, and serving customers, partners, developers and shareholders | https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition | 2026-11-12; exact publication time not displayed on the page | Statement issued with leadership announcement on Nov 12 | 2026-11-15T10:11:00-05:00 | 2026-11-15T10:11:00-05:00 | primary_source | KRESS_TRANSITION_STATEMENT_20261112 | yes | verified_fact (that she made the statement) | Official company release confirms the wording and interim role. It is a public commitment/position, not independent evidence that operations or customer commitments will in fact remain uninterrupted. | evidence-register-v0.6 |
+| NVDA-20261115-KRESS-002 | reported internal message | The Information | Kress reportedly wrote to employees: “I believe deeply in this company and in its future,” adding that NVIDIA plays a vital role in the AI revolution and has important work ahead; she reportedly planned a company meeting for the following Wednesday | https://www.theinformation.com/articles/interim-nvidia-ceo-colette-kress-tried-tame-nvidias-riskiest-bets | 2026-11-12 08:12 a.m. PST (16:12 UTC), as displayed by the publication | Internal message reportedly sent Thursday morning, Nov 12; exact message timestamp not independently verified | 2026-11-15T10:11:00-05:00 | 2026-11-15T10:11:00-05:00 | secondary_report; original employee message not independently accessed | KRESS_TRANSITION_STATEMENT_20261112 | yes — article publication precedes cutoff | reported_claim | Article has a subscription wall. Quote and context are attributed to the outlet's reporting; not independently verified against the original internal message. This is a statement of confidence and priorities, not earnings guidance. | evidence-register-v0.6 |
+| NVDA-20261115-NEWS-003 | news article / attributed sources | Reuters | Sources described Kress as a pragmatic counterweight to Huang, saying she and finance staff pushed back on certain large customer-financing and AI-infrastructure commitments; Reuters reported a proposed $250B OpenAI-related support plan was pared to $120B | https://www.reuters.com/business/colette-kress-cfo-who-challenged-huangs-bets-is-nvidias-interim-ceo-2026-11-13/ | 2026-11-13 02:08 UTC; updated Nov 13, exact update time not shown | Past financing discussions; exact dates for each internal disagreement not specified in the article | 2026-11-15T10:11:00-05:00 | 2026-11-15T10:11:00-05:00 | secondary_report; claims attributed largely to unnamed sources | KRESS_CAPITAL_DISCIPLINE_20261113 | yes | reported_claim | These are Reuters-reported accounts from sources, not statements Kress made publicly and not confirmed here by a primary filing or contract. Do not treat the $250B/$120B figures as binding contracts or completed spending without primary evidence. | evidence-register-v0.6 |
+
+### Evidence-quality interpretation
+
+**What Kress herself publicly said (primary source)**
+- She emphasized continuity, the leadership team, accelerated computing and AI, and service to customers, partners, developers and shareholders. The exact quote appears in NVIDIA's official Nov 12 release.
+- This is the clearest directly attributable public comment found in this run. The accessible official source does not contain a detailed standalone interview or a new earnings outlook from Kress.
+
+**What a media outlet reports she told employees**
+- The Information reports a confidence-building internal note sent on Nov 12. The original note was not publicly retrieved in this run; classify the wording as a secondary-reported quote, not independently primary-verified.
+
+**What reporters say about her management style**
+- Reuters reports, based on people familiar with internal discussions, that Kress and finance staff challenged some large financing proposals. This could indicate more emphasis on risk concentration and capital discipline, but remains reported internal history. Do not infer a new policy unless NVIDIA confirms it or subsequent disclosures show a change.
+- Some articles cover the same transition and draw on overlapping unnamed sources. Treat those as potentially correlated reporting, not automatically independent corroboration.
+
+### Pilot implications — inferences/hypotheses, not facts
+1. **Continuity hypothesis:** her public language signals a desire to reassure customers and employees; verify against actual guidance, customer disclosures, product roadmap, and subsequent execution.
+2. **Capital-discipline hypothesis:** if the reported internal pushback is accurate and persists, NVIDIA could scrutinize customer financing, guarantees, and concentration more closely. That might reduce risk exposure but could also change the pace or structure of some AI infrastructure deals. Neither outcome is established.
+3. **Vision/strategy uncertainty:** it remains unknown whether an interim CFO/CEO will maintain Huang's prior risk appetite and product/market strategy. Her public statement does not answer this.
+4. No bullish/bearish trade call or numerical sentiment score is warranted from these statements alone.
+
+### Missing / next verification tasks
+- Find any authorized, directly accessible Kress interview, investor presentation, earnings commentary, or transcript and preserve its exact timestamp and context.
+- On Nov 17, capture her official written CFO commentary only after NVIDIA publicly releases it, and the earnings-call remarks only after they occur; place these in the post-release dataset, not in this pre-event snapshot.
+- Check filings and company materials for evidence of customer-financing guarantees, concentration, commitments, or changes to guidance. Do not infer contract terms from media shorthand.
+- Keep social evidence marked missing until authorized access is documented. This run did not collect X posts or social metrics.
+- Continue treating allegations about espionage or chip shipments as separate reported claims; these Kress comments do not substantiate them.
