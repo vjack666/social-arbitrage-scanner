@@ -339,3 +339,48 @@ A page found later with a historical publication date can support retrospective 
 - Check filings and company materials for evidence of customer-financing guarantees, concentration, commitments, or changes to guidance. Do not infer contract terms from media shorthand.
 - Keep social evidence marked missing until authorized access is documented. This run did not collect X posts or social metrics.
 - Continue treating allegations about espionage or chip shipments as separate reported claims; these Kress comments do not substantiate them.
+
+
+---
+
+## Daily point-in-time snapshot — 2026-11-16 (pre-earnings)
+
+- **Decision cutoff:** 2026-11-16 09:48:46 America/Guayaquil (UTC−05:00).
+- **Event anchor:** NVIDIA Q3 FY2027 results scheduled for 2026-11-17 at approximately 1:20 p.m. Pacific / 4:20 p.m. Ecuador; conference call 2:00 p.m. Pacific / 5:00 p.m. Ecuador. Official timing checked against NVIDIA's Oct 28 release. Treat as scheduled, subject to company updates.
+- **Collection note:** Public web sources retrieved for this run. Exact per-page retrieval timestamps were not exposed by the search interface; do not equate the run cutoff with source publication or retrieval time. Only sources whose reported publication date/time is compatible with the cutoff are included as contemporaneous evidence. No post-earnings data is included.
+
+### Evidence items
+
+| ID | Publication / event time | Retrieved / timezone | Source | Claim class | Verification / limitations | Duplicate relationship |
+|---|---|---|---|---|---|---|
+| NVDA-20261116-EARNINGS-001 | Published 2026-10-28; event: results 2026-11-17 ~1:20 p.m. PT and call 2 p.m. PT | Retrieved during 2026-11-16 run; retrieval clock not exposed; company times Pacific | [NVIDIA official earnings-call notice](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873) | Primary-source fact (schedule) | Confirms schedule and says CFO written commentary will be posted after results are publicly announced. Schedule can change; not evidence about results. | Primary source; do not count news rewrites as independent confirmation. |
+| NVDA-20261116-LEADERSHIP-001 | Published 2026-11-12; filing reports board action 2026-11-11 | Retrieved during this run; source timestamps: release date and SEC report date | [NVIDIA official transition release](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition); [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm) | Confirmed fact | Transition is recorded as confirmed because NVIDIA's official release states Jensen Huang resigned, Colette Kress became interim CEO and remains CFO, and the board began a permanent CEO search. SEC filing corroborates the disclosed event. The company’s assurance of continuity is management/board expectation, not independently proven outcome. | SEC 8-K includes the press release as Exhibit 99.1; these are related primary records, not two independent events. |
+| NVDA-20261116-MARKET-001 | Quote shown for 2026-11-16 premarket at 7:57:30 a.m. EST; prior regular-session close 2026-11-13 4:00:01 p.m. EST | Source page retrieved during run; displayed times EST (UTC−05:00, same offset as Ecuador on this date) | [Yahoo Finance NVDA historical data](https://finance.yahoo.com/quote/NVDA/history/) | Market observation | Page displayed NVDA at $158.51, down 2.67%, premarket at 7:57:30 EST; last completed regular session close shown was $162.85 on Nov 13. This is a point-in-time vendor display, not an official exchange consolidated tape. No claim is made that $158.51 is the decision-cutoff price. | Not independent of other sites reproducing Yahoo/vendor market feeds. |
+| NVDA-20261116-MARKET-002 | 2026-11-13 regular-session close | Retrieved during this run; source uses date-level history, precise retrieval time not exposed | [FinanceCharts NVDA volume history](https://www.financecharts.com/stocks/NVDA/summary/volume) | Market observation / data-quality check | Reports Nov 13 close $162.85 and volume 361.601M, while Yahoo's page reports 363.8197M for the same session. Preserve both vendor observations; unresolved ~2.22M-share discrepancy. Provider methodology and licensing/access terms were not established in this run, so neither value is selected as definitive. | Same underlying market session; sources are alternative vendor representations, not independent market events. |
+| NVDA-20261116-MACRO-001 | Reuters report dated 2026-11-16; exact publication clock not exposed in retrieved result | Retrieved during this run; report publication timezone not exposed | [Reuters via Yahoo Finance: US index futures before NVIDIA results](https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-slide-104351968.html) | Reported market context | Reuters reports S&P 500 and Nasdaq-100 futures fell on Monday as AI-linked shares faced pressure ahead of NVIDIA results; notes possible portfolio rotation around Anthropic's expected market debut. The precise quote time is unavailable here, so this is contextual reporting, not a timestamped intraday measurement at the cutoff. | May overlap with other reports about the same session and sentiment; do not count syndicated versions as separate corroboration. |
+| NVDA-20261116-EXPORT-001 | Reuters report dated 2026-11-16; exact publication clock not exposed in retrieved result | Retrieved during this run; report timezone not exposed | [Reuters: US export-licensing rule for advanced AI chips](https://www.reuters.com/legal/litigation/us-issues-rule-protect-advanced-ai-chips-being-accessed-remotely-2026-11-16/) | Reported policy event | Reuters reports a US rule requiring licenses for advanced AI chips accessed remotely through data centers in Singapore, Thailand, Malaysia, Indonesia and Brazil. Primary rule text and exact effective date were not separately retrieved for this snapshot; treat legal detail as reported, not independently primary-verified. Potentially relevant to addressable demand, compliance costs and regional deployment, but effect on NVIDIA revenue is an inference, not an observed result. Publication clock is missing, so timing relative to the 09:48:46 cutoff cannot be fully proven; retain as a lead for verification, not a confirmed pre-cutoff signal. | Do not count articles repeating the same Reuters report as independent evidence. |
+
+### Evidence-quality assessment at cutoff
+
+**Observed / confirmed**
+- Earnings schedule remains listed by NVIDIA for Nov 17; official notice specifies the CFO's written commentary follows public release of results.
+- CEO transition is confirmed by NVIDIA's official release and corroborated by its SEC 8-K.
+- Public market page displayed NVDA premarket at $158.51 (-2.67%) at 7:57:30 EST; Nov 13 close $162.85. The display time is earlier than the decision cutoff and must not be mislabeled as a 09:48 quote.
+- Vendor volume for Nov 13 is inconsistent: Yahoo 363.8197M versus FinanceCharts 361.601M. Keep both with provenance.
+
+**Reported claims / context**
+- Reuters describes pressure in index futures and AI-linked equities ahead of results; exact article publication clock was unavailable in the retrieved output.
+- Reuters reports new US export-licensing requirements affecting remote access to advanced AI chips via specified third-country data centers. Primary legal text and timing need verification.
+
+**Inferences / hypotheses — not established facts**
+- The combination of leadership uncertainty, pressure in AI-linked shares, financing scrutiny and export controls could raise the market's sensitivity to NVIDIA's guidance on demand, supply and customer commitments.
+- These sources alone do not establish that AI demand is a bubble, nor do they determine the direction of the earnings reaction.
+- No bullish/bearish trade recommendation and no numeric sentiment score assigned.
+
+### Missing data and next verification tasks
+1. **Social evidence: MISSING.** No authorized direct access to X/Reddit/Stocktwits and no valid post-level dataset, timestamps, engagement counts or sentiment metrics were obtained. No social score.
+2. Retrieve primary text of the Nov 16 US export-control rule and establish publication/effective timestamps before promoting the item from lead to verified policy evidence.
+3. Obtain a market data provider with documented quote/volume definitions, timestamps, and access/licensing terms; reconcile Nov 13 volume discrepancy before quantitative use.
+4. Collect additional market context (QQQ/Nasdaq-100, SOXX/semiconductors, broad S&P 500) with a consistent source and cutoff; not enough comparable instrument data was captured in this run to make a cross-market claim.
+5. On Nov 17, capture results and Colette Kress's written commentary only after public release. Store earnings and post-release price/volume reaction in a separate post-event snapshot; do not backfill them into this pre-event record.
+6. Keep espionage and chip-shipment allegations separate and unestablished unless independently supported by primary evidence.
