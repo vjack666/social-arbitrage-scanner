@@ -384,3 +384,40 @@ A page found later with a historical publication date can support retrospective 
 4. Collect additional market context (QQQ/Nasdaq-100, SOXX/semiconductors, broad S&P 500) with a consistent source and cutoff; not enough comparable instrument data was captured in this run to make a cross-market claim.
 5. On Nov 17, capture results and Colette Kress's written commentary only after public release. Store earnings and post-release price/volume reaction in a separate post-event snapshot; do not backfill them into this pre-event record.
 6. Keep espionage and chip-shipment allegations separate and unestablished unless independently supported by primary evidence.
+
+
+---
+
+## Final scheduled pre-event snapshot — 2026-11-17
+
+**Decision/retrieval cutoff:** 2026-11-17 08:38:57 America/Guayaquil (UTC−05:00). This is the final scheduled pre-event collection. No NVIDIA earnings result or post-release market reaction is included. The next analysis must be a separately labeled post-event snapshot.
+
+### Event anchor and primary-source checks
+
+| Record | Publication/event time | Retrieval | Claim class / status | Source and limitations |
+|---|---|---|---|---|
+| NVDA-20261117-EVENT-001 | NVIDIA release dated 2026-10-28; results expected Nov 17 at approx. 1:20 p.m. PT (4:20 p.m. Ecuador); call 2 p.m. PT (5 p.m. Ecuador) | 2026-11-17 08:38:57 -05:00 | Official company schedule; verified as scheduled, subject to updates | [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873). CFO written commentary is expected immediately after public results. Schedule is not itself the results. |
+| NVDA-20261117-LEAD-001 | NVIDIA release dated 2026-11-12; board action effective 2026-11-11 per 8-K | Retrieved 2026-11-17 08:38:57 -05:00 | Official fact; verified from required primary source and SEC filing | [NVIDIA official transition release](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition); [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm). Jensen Huang resigned; Colette Kress is interim CEO and continues as CFO. No inference about cause is established by these sources. |
+| NVDA-20261117-MKT-001 | Market session 2026-11-16; Yahoo page reports close timestamp 4:00:01 p.m. EST | Retrieved 2026-11-17 08:38:57 -05:00 | Public vendor historical observation; verified as reported by vendor, not independently reconciled | [Yahoo Finance historical data](https://finance.yahoo.com/quote/NVDA/history/): close $156.14; daily open $159.02, high $163.20, low $155.01; volume 331,405,000. Yahoo defines currency as USD and labels close timestamp 4:00:01 p.m. EST. Vendor methodology/licensing terms were not fully documented in this run; do not treat as exchange-certified data. |
+| NVDA-20261117-MACRO-001 | BLS calendar lists US Import and Export Price Indexes for October 2026 at 08:30 ET on Nov 17 (08:30 Ecuador in this date's timezone) | Retrieved 2026-11-17 08:38:57 -05:00 | Official scheduled release; actual release values not verified in this collection | [BLS release schedule](https://www.bls.gov/schedule/news_release/ximpim.htm). Do not infer actual values from the calendar. A same-day result page was not verified before this cutoff. |
+| NVDA-20261117-NEWS-001 | Reuters syndication page says published 2026-11-17 05:53 and updated 05:54; page uses ET | Retrieved 2026-11-17 08:38:57 -05:00 | Reported market context; time appears before cutoff; not primary-source evidence | [Reuters via Investing.com](https://www.investing.com/news/stock-market-news/us-stock-futures-slip-ahead-of-nvidia-results-fed-speakers-in-focus-5032236). Reuters reported falling US index futures, investor concern about data-center spending/borrowing costs, and NVDA down 0.4% premarket at that report's timestamp. These are time-specific reported observations, not current quotes at the 08:38 cutoff. |
+| NVDA-20261117-NEWS-002 | Reuters article dated 2026-11-17; exact publication time not exposed in retrieved result | Retrieved by cutoff at 2026-11-17 08:38:57 -05:00 | Reported analysis; primary documentation not independently verified here | [Reuters: financing and AI trade](https://www.reuters.com/business/nvidia-turmoil-marks-end-easy-money-ai-trade-2026-11-17/). Reports investor concern that a new permanent CEO could reduce vendor financing/guarantees, and discusses credit stress among GPU-cloud firms. The interpretation is Reuters' reporting/analysis; it does not prove that all AI demand is artificial or establish that all cited arrangements were funded/disbursed. Exact publication time is missing, so temporal precision is limited. |
+
+### Evidence-quality assessment
+
+- **Confirmed facts:** official event schedule; leadership transition only as stated in NVIDIA's official release and corroborated by the SEC filing; Yahoo's displayed Nov 16 OHLCV observation.
+- **Reported claims, not established facts:** Reuters' descriptions of financing concerns and the state of credit markets. They should be checked against company filings, contract disclosures, and primary policy documents where available.
+- **Inference:** price weakness before earnings plus scrutiny of financing and leadership indicates elevated event uncertainty. A single-session move cannot establish a bubble or predict the earnings reaction.
+- **Hypotheses to test after results:** whether revenue, gross margin, guidance, cash flow, customer concentration, capital commitments and financing exposure support the market's expectations. Do not score these hypotheses as findings before the data arrives.
+- **Social evidence: MISSING.** No authorized direct social-platform access, original posts, post-level timestamps, or engagement metrics were verified. No social sentiment score.
+- **Allegations about espionage or chip shipments:** remain separate, unestablished claims; they are not accepted as facts and do not establish the reason for the leadership transition.
+- **Duplicate handling:** NVIDIA Newsroom and NVIDIA Investor Relations may republish the same company release; count as one underlying company statement. SEC 8-K is a distinct regulatory filing that corroborates the transition, not an independent explanation of its cause. Reuters via Investing.com is a Reuters-syndicated story, not a second independent report.
+- **Market-data limitation:** one provider observation is captured; no consistent, terms-documented cross-market series for QQQ/Nasdaq-100, S&P 500 and SOXX was verified at this cutoff. No market-wide quantitative comparison or score assigned.
+- **Point-in-time guardrail:** all observations above are limited to material retrievable by the stated cutoff. Do not insert later results, later corrections, or post-release price movements into this snapshot. Preserve any corrections as a new dated addendum.
+
+### Next verification tasks (post-event, separate record)
+1. After the official public release, archive NVIDIA's results release, financial tables, guidance and Colette Kress's written commentary with publication/retrieval timestamps.
+2. Reconcile reported figures against the company's own release and SEC filings when available.
+3. Capture post-release price/volume in a separate event-reaction dataset with provider, timezone, timestamp convention and access terms.
+4. Compare the reaction with QQQ/Nasdaq-100, S&P 500 and semiconductor peers using a consistent source; do not interpret NVDA's raw move alone as event causality.
+5. Continue to leave social sentiment missing unless authorized, timestamped, reproducible data is obtained.
