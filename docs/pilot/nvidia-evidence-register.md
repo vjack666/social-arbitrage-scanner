@@ -583,3 +583,64 @@ The Yahoo snapshot previously recorded at 09:41:49 ET (quote shown as 155.69 and
 - Authorized X API coverage, full post/reply sampling, verified timestamps, account-level identity / follower validation, engagement-rate normalization, duplicate removal, bot filtering, and a timestamped sentiment corpus remain unavailable.
 
 **Scanner classification:** qualitative sentiment = mixed / polarized; structural AI demand = positive statements from some industry leaders; capital intensity / valuation = material caution; Nvidia leadership = highly contested; China export-policy exposure = negative risk. This is a taxonomy of evidence, not an aggregate polarity score or trade recommendation.
+
+
+---
+
+## AI investment sustainability investigation — 2026-11-18
+
+**Research cutoff:** 2026-11-18T13:01:00-05:00 (America/Guayaquil; UTC−05:00), as research timestamp. Individual source publication dates are recorded below; this is not a claim that all pages were first published or available exactly at the cutoff.  
+**Question:** Are investors still convinced by AI demand but becoming less confident in the companies financing the infrastructure buildout?  
+**Conclusion:** Evidence supports a qualified version of this thesis: demand and operating growth remain strong in official company disclosures, while investors and public institutions are documenting increasingly material capital-intensity, debt, circular-financing, and monetization risks. It does not prove that all investors share this view or that AI demand is already falling.
+
+### Primary / institutional evidence
+
+| record_id | Source | Dated evidence | Claim class | Limitations |
+|---|---|---|---|---|
+| NVDA-SUST-20261118-001 | European Central Bank, Financial Stability Review, Nov 2026 | ECB estimates cumulative US big-tech AI capex could reach about $5.5T by 2030 (estimates vary); says free cash flow turned negative for most US hyperscalers in 2026 as AI capex exceeded operating cash flow; estimates more than $4T of off-balance-sheet commitments at Q2 2026; describes circular financial/commercial links that can inflate expected revenue. | Institutional analysis based on SEC filings, market data, and ECB calculations | Estimates and accounting definitions matter; commitments are not all immediate debt or necessarily losses. https://www.ecb.europa.eu/press/financial-stability-publications/fsr/focus/2026/html/ecb.fsrbox202611_03~4fd1449eaa.en.html |
+| NVDA-SUST-20261118-002 | US Congressional Research Service, Nov 16 2026 | Explains circular financing and supplier-investor links. It cites Nvidia's reported proposed $100B investment in OpenAI alongside planned deployment of 10GW of Nvidia GPUs, Amazon's $5B Anthropic investment with a potential further $20B and Anthropic's stated $100B spend commitment on Amazon chips/cloud over 10 years, and links between OpenAI, Oracle and chip suppliers. | Government research summary of publicly reported/company-disclosed arrangements | Illustrative relationships, not evidence that every arrangement is improper or that reported demand is fictitious. https://www.everycrsreport.com/files/2026-11-16_IF13349_f02f54cd07d1d5b4ea1e94fd7b0cc89daa30e9d7.pdf |
+| NVDA-SUST-20261118-003 | Alphabet Q3 2026 earnings call | Alphabet reported $127.6B revenue, $42.3B quarterly operating cash flow, $51.4B capex, and negative $9.1B quarterly free cash flow; maintained 2026 capex guidance of $195B–$205B and said capex would rise significantly in 2027. It also said Google Cloud AI revenues were in the tens of billions year-to-date. | Company-reported facts and management claims | Company results do not isolate the return on each AI investment; management's monetization claim is not independently audited as a separate AI segment. https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/ |
+| NVDA-SUST-20261118-004 | Meta Q3 2026 results | Meta reported $34.91B quarterly capex, negative $2.12B free cash flow in the quarter, and 2026 capex guidance of $135B–$145B; it said AI investments were contributing incremental advertising revenue. | Company-reported facts and management claim | Quarter includes a $9.9B legal charge affecting expenses; negative FCF should not be attributed solely to AI without adjustment. https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx |
+| NVDA-SUST-20261118-005 | Bank of America fund-manager survey, reported by Reuters, Nov 17 2026 | Net overweight technology fell from 37% to 12%; 38% said companies were overinvesting; 52% expected at least one AI hyperscaler to cut capex in the next six months. Survey: 169 investors with $461B AUM. | Survey measurement / reported result | Respondents' views, not proof of future cuts; this is not an X/Twitter population. https://www.investing.com/news/economy-news/investors-slashed-tech-exposure-last-month-anticipate-less-capital-spending-5032364 |
+| NVDA-SUST-20261118-006 | Reuters market report, Nov 18 2026 | Reuters described NVDA reversing premarket gains, falling nearly 2% in early trade after premarket gains of up to 3%, with AI-linked stocks mixed; cited strong demand but continued concerns around CEO succession, China, capex and regulation. | Reported market observation / attributed analysis | Market movement is multifactorial; the report does not establish that capex concerns alone caused the move. https://new.streetinsider.com/Reuters/Nvidia%2Bretreats%2C%2Bweighs%2Bon%2BAI%2Bstocks%2Bas%2Bstrong%2Boutlook%2Bfails%2Bto%2Bdispel%2BHuang%2Buncertainty/27366325.html |
+| NVDA-SUST-20261118-007 | Reuters results report, Nov 17 2026 | Nvidia beat Q3 earnings/sales estimates and guided Q4 revenue to $126B–$134B vs analyst average just above $125B; management said demand remained strong and assumed no China data-center chip sales in its outlook. | Company-reported results / reported analyst consensus | Guidance is forward-looking and cannot establish whether future spending will earn adequate returns. https://www.investing.com/news/stock-market-news/nvidia-earnings-beat-estimates-attention-turns-to-call-5034180 |
+
+### Synthesis: separate facts from interpretation
+
+**Verified / attributable facts**
+- There is strong current operating demand: Nvidia's Q3 revenue exceeded $115B and its Q4 guide exceeded the analyst consensus reported by Reuters.
+- At least two major hyperscalers show very large capex plans alongside quarterly negative free cash flow in their latest reported periods: Alphabet ($51.4B capex, −$9.1B FCF) and Meta ($34.91B capex, −$2.12B FCF). Meta's quarter included a large legal charge; this is a caveat when comparing cash flow and earnings.
+- The ECB and CRS independently identify circular financing and opaque / debt-like commitments as a real structural risk in the AI buildout. These reports discuss mechanisms and potential consequences; they do not declare the entire sector a bubble.
+- The BofA survey documents a substantial fall in technology overweight positioning and widespread concern about overinvestment / possible capex cuts.
+- Reuters' Nov 18 account describes NVDA and AI-linked shares retreating or trading mixed after the earnings relief, with leadership, China, spending and regulatory uncertainty all in the narrative.
+
+**Inference**
+- The evidence supports a split between confidence that AI compute is needed now and uncertainty about how much of the current spending converts into durable, cash-generating end demand. This is more precise than saying “investors no longer believe in AI.”
+- Circular financing can support real capacity expansion and legitimate strategic partnerships while also making organic end-user demand harder to isolate. The risk is not automatically fraud; it is opacity, concentration, counterparty dependence, and valuation sensitivity if growth or monetization misses expectations.
+- For chip suppliers, orders and near-term revenue can remain strong even while equity multiples contract if investors demand more proof of customer return on invested capital, sustainable free cash flow, and funding resilience.
+
+**Hypotheses to test, not facts**
+- Whether hyperscaler capex will actually be cut in the next six months.
+- Whether AI end-user revenue will grow fast enough to cover depreciation, power, networking, financing and chip replacement costs.
+- Whether current circular arrangements materially overstate *net new external demand* rather than merely shifting the timing and financing of real demand.
+- Whether the post-earnings price reaction in NVDA was driven mainly by financing / capex concerns versus leadership uncertainty, China policy, valuation, or broader market flows.
+
+### Cross-company watchlist and discriminating indicators
+
+| Company / group | What supports AI demand | What could reveal financing / ROI stress |
+|---|---|---|
+| NVDA | Data Center revenue, backlog / supply commentary, gross-margin outlook | Customer concentration, receivables / payment terms, inventory, export restrictions, customer capex guidance, equity stakes and supplier-financing exposure |
+| AMD / Broadcom | Accelerator and networking revenue, customer wins, backlog | Revenue concentration, gross margins, customer funding / warrants, whether demand is diversified beyond a few AI labs |
+| Alphabet / Google Cloud | Cloud AI revenue, backlog, Search / Workspace monetization, operating cash flow | Capex vs operating cash flow, free cash flow, depreciation, commitments, cloud margin and realized return on infrastructure |
+| Amazon / AWS | AWS growth, AI services and infrastructure demand | Capex / operating cash flow, bond issuance, commitments to AI labs, cloud margin and customer concentration |
+| Meta | Ad revenue lift from AI recommendations and engagement | Capex vs FCF, returns from AI products, spending guidance and depreciation burden |
+| Oracle / CoreWeave / other neoclouds | Contracted capacity, utilization, revenue growth | Debt spreads, leverage, customer concentration, lease obligations, refinancing needs and dependence on a small number of AI labs |
+| AI labs | Paying enterprise / consumer revenue, retention and inference economics | Revenue less compute cost, external funding dependence, long-term cloud / chip commitments and related-party financing |
+
+### Decision-useful conclusion for the Social Arbitrage Scanner
+
+**Classification:** AI demand = strong but not equivalent to sustainable returns; capex financing = elevated and institutionally documented risk; investor positioning = materially more cautious; evidence for an imminent universal spending cut = not established.
+
+For follow-up, use a monthly panel rather than a single social-sentiment score: (1) official revenue / backlog, (2) capex and operating cash flow, (3) free cash flow and debt / lease commitments, (4) customer concentration and reciprocal financing links, (5) hyperscaler forward capex guidance, (6) credit spreads / refinancing indicators, and (7) timestamped public sentiment after duplicate removal and source-quality checks.
+
+No bullish or bearish trade recommendation is made. This research addendum does not modify the prior point-in-time price snapshots.
