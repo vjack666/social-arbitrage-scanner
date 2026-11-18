@@ -13,6 +13,13 @@ Evidence-first research system for detecting discrepancies between social attent
 - [05 — Quantitative Validation](docs/agents/05-quantitative-validation.md)
 - [Coordinator](docs/architecture/coordinator.md)
 
+## Company research watchlist
+- [Research index](research/companies/README.md)
+- [Medline (MDLN) — high-priority secondary offering and fundamentals monitor](research/companies/medline/README.md)
+- [Anthropic — IPO watch](research/companies/anthropic/README.md)
+- [Core Specialty Insurance Holdings — S-1 watch](research/companies/core-specialty/README.md)
+- [Mahanadi Coalfields — reported IPO watch](research/companies/mahanadi-coalfields/README.md)
+
 ## Core principles
 1. Separate verified facts, inferences, and hypotheses.
 2. Preserve source URLs, publication/event timestamps, retrieval timestamps, and provenance.
@@ -29,4 +36,4 @@ Requirements → design → owner approval → data/licensing review → prototy
 NVIDIA is a candidate case study, not a pre-decided bullish or bearish thesis. Any retrospective test must reconstruct what was knowable at each historical timestamp and exclude future information.
 
 ## Current deliverable
-This repository currently contains design/specification documents only. No agent implementation, live data integration, backtest result, or trading capability is claimed.
+This repository currently contains design/specification documents and public-source research notes. No agent implementation, live data integration, backtest result, or trading capability is claimed.
