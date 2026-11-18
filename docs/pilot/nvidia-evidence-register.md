@@ -532,3 +532,54 @@ A page found later with a historical publication date can support retrospective 
 The Yahoo snapshot previously recorded at 09:41:49 ET (quote shown as 155.69 and then-displayed intraday low 155.08) was taken during, not after, the 09:30–10:30 H1 candle. The later user-supplied H1 low of 152.70 can therefore reflect subsequent trading within that same hour. These observations are not inherently contradictory on timestamp grounds. Exact instrument-feed conventions and the user's chart vendor remain unverified; do not silently replace either observation with the other.
 
 **Evidence-quality rule:** Keep this addendum separate from the public-source point-in-time register rows. Do not promote user-supplied chart readings to exchange-verified measurements without a matching vendor/time-stamped record. No bullish/bearish trade recommendation is made.
+
+
+---
+
+## Social / influencer sentiment snapshot — 2026-11-18
+
+**Snapshot retrieval time:** 2026-11-18T10:42:00-05:00 (America/Guayaquil; UTC−05:00). This is a minute-precision contextual timestamp, not a per-post retrieval timestamp.  
+**Coverage:** Public, legally accessible web pages and publicly indexed X/Twitter posts surfaced through web search / a third-party X archive. Google search results were used to discover and cross-check public reporting; Google itself is not a sentiment dataset.  
+**Access:** No authenticated X account, X API, private posts, private groups, paid data terminal, or complete replies corpus was accessed. Direct X post fetches returned HTTP 403 in this retrieval path; post excerpts below are retained only where a public index/archive or reputable reporting made them viewable.  
+**Sampling caveat:** This is a purposive, search-indexed sample of visible voices, not a random sample of X users, all AI professionals, or the market. No statistically valid net-sentiment score is calculated.
+
+### Person-level observations
+
+| record_id | Person / account | Public statement or position | Time | Sentiment dimension | Evidence quality / limitation |
+|---|---|---|---|---|---|
+| NVDA-SOC-20261118-001 | Sam Altman, OpenAI CEO | At a Nov 16 Semafor event, said AI demand and revenue are growing strongly and that the industry would be fine without Huang leading Nvidia; praised Huang's role but declined to judge whether he should return. | 2026-11-16; pre-earnings | Positive on structural AI demand; measured on Nvidia succession | Secondary report by TechCrunch quoting public remarks. Not a post-earnings reaction. https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/ |
+| NVDA-SOC-20261118-002 | Gary Marcus, AI researcher / critic | In a Nov 16 essay titled “Game over, man?”, argued that the AI bubble appeared to have popped, citing Nvidia's role in financing AI infrastructure, circular financing, and weak profitability / moats at LLM companies. | 2026-11-16; pre-earnings | Strongly skeptical of AI investment sustainability | Primary opinion piece by the author, not a neutral measurement or market data. https://garymarcus.substack.com/p/game-over-man |
+| NVDA-SOC-20261118-003 | Elon Musk, xAI founder | Publicly supported a petition to reinstate Jensen Huang as Nvidia CEO. | 2026-11-13 | Pro-Huang / leadership continuity, not a direct AI-demand or NVDA valuation call | Public X statement quoted by The Washington Post. https://www.washingtonpost.com/business/2026/11/13/musk-joins-calls-jensen-huang-be-reinstated-ceo-nvidia/ |
+| NVDA-SOC-20261118-004 | Tobi Lütke, Shopify CEO | Public post said Jensen Huang was “1 on 1” and that his return to Nvidia was in everyone's best interest. | 2026-11-17 (public mirror shows 21:57 UTC) | Pro-founder return / governance preference | Text surfaced through a third-party public mirror, not a directly retrievable X page. https://www.teapawt.org/tobi/status/2122811342423826728 |
+| NVDA-SOC-20261118-005 | Travis Kalanick, Uber cofounder; Jason Calacanis, investor / podcast host | Both publicly urged Nvidia to bring Huang back. Dan Ives said Huang's statement moves pressure from a petition toward the board; Gavin Baker said he wanted Huang back if cleared by investigations. | 2026-11-17 | Pro-Huang among these named voices; views concern leadership and succession | Public posts / interview remarks compiled by Business Insider; these are multiple people but a common leadership-focused theme, not independent evidence of AI demand. https://www.businessinsider.com/jensen-huang-new-statement-nvidia-reaction-2026-11 |
+| NVDA-SOC-20261118-006 | Jensen Huang, Nvidia founder | In a public X statement, accepted responsibility for personal mistakes, said he would cooperate with the board investigation, and said he would be honored to return if the board deemed it best. | 2026-11-17, 11:18 AM ET according to public X archive | Personal / leadership statement; not a demand forecast | Indexed by Advance Intelligence with visible engagement metrics. The archive header's stated scan time (8:10 AM ET) appears earlier than the post's displayed 11:18 AM ET timestamp, so displayed metrics (49.6M views, 1.1M likes, 116.2K reposts) are **not accepted as a timestamp-consistent quantitative engagement observation**. Content is retained as an indexed public statement only. https://www.advanceintelligence.ai/2026-11-17 |
+| NVDA-SOC-20261118-007 | Tibo Sottiaux, OpenAI Codex team | Said early GPT-6.2 Sol/Astra reviewers may have used older builds; described the released models as a substantial step forward but not perfect. A developer retest by Theo (@theo / t3.gg) said late fixes improved the model but it still missed the point in his example. | 2026-11-18, public X archive displays 00:47 AM and 04:54 AM ET | Mixed sentiment on current AI product quality, not NVDA fundamentals | Public posts indexed by an X archive. Individual product feedback, not independent benchmark evidence. https://www.advanceintelligence.ai/ |
+
+### Broader investor sentiment — not the same as social sentiment
+
+- Reuters reported Bank of America's November fund-manager survey on Nov 17: net overweight in technology fell from 37% to 12%, the largest one-month fall since June 2006; 38% said companies were overinvesting; 52% expected at least one AI hyperscaler to cut capex within six months. The survey covered 169 investors managing $461B. Treat as a survey of professional investors, not X users or a direct NVDA trade signal. https://www.reuters.com/business/global-markets-bofa-survey-2026-11-17/
+- Nvidia's official Nov 17 release reported $115.8B revenue (+103% YoY), $107.6B Data Center revenue (+110% YoY), and Q4 revenue guidance of $130B ±3%. Those are company-reported operating results / guidance, not sentiment. https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/
+- Reuters reported on Nov 18 that Nvidia said it had stopped shipping licensed Hopper data-center products to China and that its current guidance includes no such products. This is a company statement reported by Reuters and a relevant policy / addressable-market risk; it is not an influencer opinion. https://www.reuters.com/world/china/nvidia-stops-shipping-us-approved-ai-chips-china-2026-11-18/
+- A public X digest scanned at 08:00 ET on Nov 18 highlighted that China-shipment story, OpenAI model-quality discussion, and an unsourced Watcher Guru claim about Chinese military demand for advanced chips. The latter claim had no cited document or source in the digest and is **excluded from factual evidence** pending a primary report. https://www.advanceintelligence.ai/
+
+### Synthesis — facts, claims, inferences, hypotheses
+
+**Observed facts / attributable statements**
+- The sampled public voices are not aligned: Altman was confident about aggregate AI demand; Marcus argued the investment bubble was breaking; Musk, Lütke, Kalanick and Calacanis supported Huang's return; Sottiaux and Theo discussed mixed reactions to an AI model release.
+- The Jensen-return discussion was highly visible in the indexed X archive, but the archive's scan-time inconsistency prevents using the displayed engagement counts as a valid point-in-time metric.
+- The BofA fund-manager survey records material caution about AI capex before Nvidia's earnings release, while Nvidia's subsequent official figures and guidance were strong.
+
+**Reported claims**
+- The named individuals' views are reported from their public statements or secondary coverage as referenced above. Statements about motives, board factions, or alleged misconduct are not inferred here.
+
+**Inferences**
+- The qualitative evidence suggests a split between confidence in the underlying demand for AI compute and concern about the way the AI infrastructure boom is financed, valued, governed, and exposed to export controls.
+- The prominence of pro-Huang statements indicates a leadership / founder-dependence narrative, but does not establish that the same people expect NVDA shares to rise.
+- If compared with the user's supplied first H1 candle (O 159.20, H 159.70, L 152.70, C 153.76), positive company guidance alongside a bearish candle is consistent with a “good fundamentals, contested equity reaction” hypothesis. It does **not** establish causality, a sell-the-news event, or a directional trading signal; user chart readings remain unverified vendor data as documented in the prior addendum.
+
+**Hypotheses / gaps**
+- Whether the wider X conversation is net positive or negative cannot be estimated from this purposive sample.
+- Whether AI-lab revenue growth can support planned capex, and whether hyperscalers will continue current spending rates, remain open questions.
+- Authorized X API coverage, full post/reply sampling, verified timestamps, account-level identity / follower validation, engagement-rate normalization, duplicate removal, bot filtering, and a timestamped sentiment corpus remain unavailable.
+
+**Scanner classification:** qualitative sentiment = mixed / polarized; structural AI demand = positive statements from some industry leaders; capital intensity / valuation = material caution; Nvidia leadership = highly contested; China export-policy exposure = negative risk. This is a taxonomy of evidence, not an aggregate polarity score or trade recommendation.
