@@ -421,3 +421,56 @@ A page found later with a historical publication date can support retrospective 
 3. Capture post-release price/volume in a separate event-reaction dataset with provider, timezone, timestamp convention and access terms.
 4. Compare the reaction with QQQ/Nasdaq-100, S&P 500 and semiconductor peers using a consistent source; do not interpret NVDA's raw move alone as event causality.
 5. Continue to leave social sentiment missing unless authorized, timestamped, reproducible data is obtained.
+
+
+## Post-earnings opening snapshot — 2026-11-18
+
+**Decision/retrieval timestamp:** 2026-11-18T09:42:24-05:00 (America/Guayaquil; UTC−05:00). US regular session opened at 09:30:00 ET, so this retrieval occurred 12m24s after the open, not exactly at +10 minutes. **Snapshot quality: partial; exact 09:40 market data not independently captured.** This is a new post-event snapshot; no prior pre-event snapshot has been edited.
+
+### Source register
+
+| record_id | source_type | publisher | title_or_claim | canonical_url | published_at | event_at | retrieved_at | decision_timestamp | verification_status | duplicate_group | eligible_for_snapshot | claim_class | notes_and_limitations | dataset_or_parser_version |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| NVDA-20261118-COMPANY-001 | company release | NVIDIA Investor Relations | Q3 FY2027 reported revenue $115.8B (+103% y/y), Data Center $107.6B (+110% y/y), GAAP EPS $2.70; Q4 revenue outlook $130B ±3% | https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx | 2026-11-17; exact release clock time not independently confirmed from page in this run | Results for quarter ended 2026-10-25 | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | primary_source | NVDA_Q3FY27_RESULTS | yes — official company release | verified_fact | Company-reported financials and guidance. The company also states its Q4 outlook assumes no Data Center compute revenue from China. | evidence-register-v0.4 |
+| NVDA-20261118-MARKET-001 | market data | Yahoo Finance | Historical regular-session close Nov 17: $155.46; open $156.90, high $158.19, low $150.33; volume 398,625,600 shares displayed | https://finance.yahoo.com/quote/NVDA/history/ | Session row dated 2026-11-17; row publication time not displayed | Regular session 2026-11-17, close 16:00 ET | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | measurement | NVDA_REGULAR_CLOSE_20261117 | yes — prior-session historical context | measurement | This is the regular-session close before the scheduled after-close earnings release, not an after-hours reaction. Another public aggregator reports a slightly different volume (~399.0M); retain vendor-specific values and do not average. Data licensing terms for systematic storage/reuse were not verified. | evidence-register-v0.4 |
+| NVDA-20261118-MARKET-002 | market data | Yahoo Finance | Quote page showed a live-price header of $159.93 (+2.88%) but historical close remained $155.46; no timestamp for the $159.93 header was present in the retrieved result | https://finance.yahoo.com/quote/NVDA/history/ | Exact quote timestamp unavailable | Session/phase unclear from this result | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | unverified | NVDA_LIVE_QUOTE_UNTIMED_20261118 | no for exact +10-minute measurement; retained as an unresolved provider observation | measurement | Cannot establish whether this value is a delayed quote, premarket, or regular-session observation at the 09:40 cutoff. Do not use as a verified 09:40 price or calculate a precise event return from it. Yahoo's localized AU page separately displayed $160.92 at 07:21:11 ET as premarket; that is explicitly premarket and not a regular-session observation. | evidence-register-v0.4 |
+| US-MARKET-20261118-NEWS-001 | news article | Reuters | Reported opening levels: S&P 500 +0.21% at 7,355.69; Nasdaq Composite +0.65% at 24,486.175; Dow −0.26% at 50,627.36; article attributes improved AI-stock sentiment partly to NVIDIA's forecast | https://www.reuters.com/business/nasdaq-futures-jump-nvidia-forecast-lifts-ai-trade-ahead-anthropic-pricing-2026-11-18/ | Page shows 2026-11-18 10:28 UTC; this timestamp appears inconsistent with the article describing the US opening, which occurs 14:30 UTC. Treat publication-time/availability ordering as disputed pending clarification. | US opening bell; precise observation timestamp not stated in excerpt | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | disputed | US_OPEN_INDEX_REACTION_20261118 | provisional only; not accepted as strictly point-in-time verified until timestamp anomaly is resolved | reported_claim | This is the Nasdaq Composite, not Nasdaq-100. Article states delayed quotes minimum 15 minutes. The page timestamp is chronologically inconsistent with its described event; retain as a source-quality issue and do not treat as verified exact +10-minute data. | evidence-register-v0.4 |
+| NVDA-20261118-NEWS-002 | news article | Reuters | European chipmakers and AI infrastructure names advanced after NVIDIA's strong results/outlook; mining stocks declined as copper weakened and the dollar strengthened | https://www.reuters.com/markets/europe/european-shares-muted-tech-offsets-mining-weakness-2026-11-18/ | 2026-11-18; exact publication time not available in search result | European trading session, Nov 18; precise observation times not supplied | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | corroborated as a reported account, not tick data | AI_SECTOR_REACTION_20261118 | yes for qualitative sector context only; exact point-in-time eligibility not proven from accessible timestamp | reported_claim | Reuters coverage is a single underlying news source; syndicated copies are not independent confirmation. No exact US opening prices or volumes for AMD, AVGO, TSM, MU or CRWV verified here. | evidence-register-v0.4 |
+| NVDA-20261118-MACRO-001 | macro/context | The Wall Street Journal | Market commentary noted Treasury yields rising, a stronger dollar, oil little changed and gold/copper falling; investors also awaited Federal Reserve minutes | https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546 | 2026-11-18; exact publication time not verified in retrieved result | Pre/opening market context; exact event timestamps not supplied | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | reported_claim | MACRO_CONTEXT_20261118 | qualitative context only; strict availability by cutoff not fully verified | reported_claim | No independently collected numerical yield, DXY, gold, oil or copper series in this snapshot. | evidence-register-v0.4 |
+| NVDA-20261118-SOCIAL-001 | social data | Not collected | Authorized social-source evidence unavailable | — | — | — | 2026-11-18T09:42:24-05:00 | 2026-11-18T09:42:24-05:00 | excluded | — | no — no authorized API/access path verified | measurement | No posts, engagement counts, author diversity, or sentiment metrics collected. | evidence-register-v0.4 |
+
+### Findings: facts, reported claims, inferences, hypotheses
+
+**Verified facts**
+- NVIDIA's official release reports $115.8B Q3 revenue, $107.6B Data Center revenue, GAAP EPS $2.70, and $130B ±3% Q4 revenue guidance.
+- Yahoo Finance's historical table shows NVDA's Nov 17 regular-session close at $155.46, down about 0.44% from the Nov 16 close of $156.14. The results release was scheduled after the regular session, so Nov 17's regular close is not the post-earnings reaction.
+- This run's actual retrieval cutoff was 09:42:24 Ecuador/ET, 12m24s after the 09:30 open. It missed the exact +10-minute mark by 2m24s.
+
+**Reported claims**
+- Reuters reports the S&P 500 and Nasdaq Composite opened higher and the Dow lower; Reuters attributes improved AI sentiment partly to NVIDIA guidance. The article's displayed publication timestamp (10:28 UTC) conflicts with the stated opening event time (14:30 UTC), so the observation is not accepted as verified point-in-time evidence until clarified.
+- Reuters separately describes strength in European semiconductor names after the results. This is qualitative sector context, not a substitute for US intraday quotes.
+
+**Inferences**
+- NVIDIA's results/guidance were a positive catalyst in contemporaneous reporting, but attribution cannot be isolated from other market drivers with these sources alone.
+- The exact 09:40 NVDA price, first-ten-minute volume, Nasdaq-100, and semiconductor-peer relative performance remain unverified. Do not substitute a quote with unknown timestamp or premarket data.
+
+**Hypotheses not tested**
+- Whether social sentiment anticipated the earnings response.
+- Whether the post-event move is durable beyond the opening interval.
+- Whether the reaction reflects guidance, short covering, broader tech strength, or other flows.
+
+### Comparison with pre-event baseline (preserve prior snapshots)
+- Prior pre-event NVDA close in this register: Nov 16 close $156.14 (vendor historical row).
+- Earnings-day regular close before the after-hours release: Nov 17 close $155.46 (same provider), approximately −0.44% versus Nov 16.
+- Post-release quote observation: Yahoo header $159.93 (+2.88%) lacks an exact timestamp and session-phase label; not valid for a precise return calculation.
+- Do not overwrite the Nov 12–17 pre-event snapshots. This section is the post-event evaluation record.
+
+### Missing data and next verification
+1. Obtain a licensed point-in-time intraday source with 1-minute bars for NVDA and a clear timestamp/session convention; capture 09:30–09:40 ET OHLCV and quote at 09:40.
+2. Capture comparable first-ten-minute data for Nasdaq-100 (not merely Nasdaq Composite), S&P 500, Dow, SOXX/SMH, AMD, AVGO, TSM, MU and CRWV.
+3. Resolve the Reuters publication-time anomaly before admitting its opening-level figures to a strict point-in-time evidence set.
+4. Document provider terms for systematic retention and redistribution before building automated storage.
+5. Keep social evidence marked missing until authorized access and permitted use are documented.
+6. Revisit price/volume after the close in a separate follow-up record; no directional trade recommendation is generated from this event alone.
+
+**Correction/version policy:** This section was appended as evidence-register-v0.4; previous snapshots remain unchanged. Any later timestamp correction must be recorded as a new version/entry, not silently substituted.
