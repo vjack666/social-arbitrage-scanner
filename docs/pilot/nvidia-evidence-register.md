@@ -474,3 +474,61 @@ A page found later with a historical publication date can support retrospective 
 6. Revisit price/volume after the close in a separate follow-up record; no directional trade recommendation is generated from this event alone.
 
 **Correction/version policy:** This section was appended as evidence-register-v0.4; previous snapshots remain unchanged. Any later timestamp correction must be recorded as a new version/entry, not silently substituted.
+
+
+---
+
+## Chart observation addendum — 2026-11-18 first regular-session H1 candle
+
+**Added:** 2026-11-18T10:42-05:00 (America/Guayaquil; minute precision from conversation context).  
+**Instrument/session supplied by user:** NVIDIA (NVDA), first regular-session H1 candle, 09:30–10:30 America/New_York on 2026-11-18. New York and Ecuador were both UTC−05:00 on this date.  
+**Source/provider:** User-transcribed chart observation; charting platform, market-data vendor, adjustment convention, and source URL were not supplied.  
+**Verification status:** unverified_user_supplied_measurement. This is not independent public-source market data.  
+**Volume:** not supplied; no volume claim is made.
+
+### User-supplied OHLC and reference levels
+
+| Item | Value | Provenance |
+|---|---:|---|
+| First H1 open | 159.20 | User-transcribed chart |
+| First H1 high | 159.70 | User-transcribed chart |
+| First H1 low | 152.70 | User-transcribed chart |
+| First H1 close | 153.76 | User-transcribed chart |
+| Prior-session high | 158.19 | User-supplied reference |
+| Prior-session low | 150.33 | User-supplied reference |
+| Daily POI upper boundary | 152.89 | User-supplied technical zone |
+| Daily POI lower boundary | 147.16 | User-supplied technical zone |
+
+### Derived measurements (arithmetic from user inputs)
+
+- H1 range: 7.00 points; real body: 5.44 points, bearish.
+- Close-to-open change: −5.44 points (approximately −3.42% of open).
+- Open was 1.01 points above the prior-session high; H1 high extended 1.51 points above that high.
+- H1 close was 4.43 points below the prior-session high.
+- H1 low reached 0.19 points inside the upper edge of the stated daily POI; the close finished 0.87 points above that upper edge.
+- H1 low remained 2.37 points above the prior-session low.
+- Upper wick: 0.50 points; lower wick: 1.06 points. Close was approximately 15.1% of the candle range up from its low.
+
+**Gap convention:** The open exceeded the prior-session high, so it opened above the entire prior-day range. The prior regular-session close was not provided in this chart observation; therefore a conventional open-versus-prior-close gap percentage cannot be calculated from these inputs alone.
+
+### Facts, inferences, and hypotheses
+
+**User-supplied measurements / context**
+- The OHLC, prior-day high/low, and daily POI boundaries above are transcribed from the user's chart/context and have not been independently validated against the chart vendor or an exchange feed.
+
+**Derived facts**
+- The first H1 candle traded above the prior-session high, then sold off through that level and wicked 0.19 points into the stated daily POI.
+- The H1 body closed bearish and above the POI's upper boundary.
+
+**Inference (not a verified causal claim)**
+- The sequence is consistent with a potential buy-side liquidity sweep above the prior-session high followed by rejection. The limited wick penetration into the daily POI and close back above its upper boundary indicate a test/reaction, but one candle alone does not establish that the POI is defended or that a reversal has formed.
+
+**Hypotheses not tested**
+- Whether subsequent H1 candles accept price back above 158.19, consolidate above 152.89, or continue lower through 150.33 toward the lower part of the POI.
+- Whether the opening move and rejection were specifically driven by earnings positioning, broader index flows, or other order flow.
+
+### Reconciliation note — earlier Yahoo intraday observation
+
+The Yahoo snapshot previously recorded at 09:41:49 ET (quote shown as 155.69 and then-displayed intraday low 155.08) was taken during, not after, the 09:30–10:30 H1 candle. The later user-supplied H1 low of 152.70 can therefore reflect subsequent trading within that same hour. These observations are not inherently contradictory on timestamp grounds. Exact instrument-feed conventions and the user's chart vendor remain unverified; do not silently replace either observation with the other.
+
+**Evidence-quality rule:** Keep this addendum separate from the public-source point-in-time register rows. Do not promote user-supplied chart readings to exchange-verified measurements without a matching vendor/time-stamped record. No bullish/bearish trade recommendation is made.
