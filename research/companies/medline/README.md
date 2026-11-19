@@ -89,3 +89,21 @@ These are hypotheses, not conclusions or trade signals.
 
 ---
 *Research note based on public information available by 2026-11-18. Not investment advice. No trade execution.*
+
+
+## Daily update — 2026-11-19
+
+### New evidence since 2026-11-18
+- **Confirmed SEC filing (2026-11-18):** the Form 8-K records the November 16 repurchase agreement for **$200 million** of Class A shares and/or Medline Holdings common units from selling stockholders. It is priced at the same per-equity-interest price as the offering, is conditional on the offering closing, and counts toward the previously authorized repurchase program.
+- **Confirmed offering terms remain unchanged:** 60 million secondary shares priced at **$35.50**; underwriters may purchase up to 9 million additional shares. Expected close remains **2026-11-23**, subject to conditions. Medline itself receives no proceeds from the secondary sale.
+- **Reported market reaction (not a full-day close):** Investing.com/Reuters reported MDLN down about **3.5% in premarket trading on 2026-11-18** after pricing. This is consistent with a possible supply/overhang reaction, but premarket movement alone does not establish causality or a durable trend.
+
+Sources:
+- SEC Form 8-K and exhibits (filed 2026-11-18): https://www.sec.gov/Archives/edgar/data/2046386/000119312526467193/mdln-20261116.htm
+- SEC preliminary prospectus: https://www.sec.gov/Archives/edgar/data/2046386/000119312526461946/mdln-20261116.htm
+- Reported premarket reaction (2026-11-18): https://www.investing.com/news/stock-market-news/medline-stock-falls-as-shareholders-price-secondary-offering-5036193
+
+### Updated interpretation
+The $200 million issuer repurchase partially offsets the headline share supply economically, but it is much smaller than the approximately $2.1 billion gross secondary sale and is not guaranteed until the offering closes. Do not describe the transaction as a $2.1 billion capital raise for Medline. The next material checkpoint is the expected November 23 close and verified post-announcement price/volume versus a relevant healthcare distribution benchmark.
+
+*Update appended 2026-11-19; prior conclusions retained. Public information only; not investment advice.*
