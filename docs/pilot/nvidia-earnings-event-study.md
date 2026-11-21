@@ -66,3 +66,7 @@ A single earnings event is a case study, not sufficient statistical evidence for
 ## Current limitations
 
 This protocol does not itself collect or archive feeds, guarantee historical social data access, or run a backtest. The announced event date/time can change. No direction, score, or profitability claim is made.
+
+## Adenda del 20 de noviembre de 2026
+
+[Cierre de mercado, volumen por proveedor y reporte regulatorio atribuido](../../research/companies/2026-11-20-close.md#nvidia-nvda--piloto).

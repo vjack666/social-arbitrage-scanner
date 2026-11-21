@@ -107,3 +107,8 @@ Sources:
 The $200 million issuer repurchase partially offsets the headline share supply economically, but it is much smaller than the approximately $2.1 billion gross secondary sale and is not guaranteed until the offering closes. Do not describe the transaction as a $2.1 billion capital raise for Medline. The next material checkpoint is the expected November 23 close and verified post-announcement price/volume versus a relevant healthcare distribution benchmark.
 
 *Update appended 2026-11-19; prior conclusions retained. Public information only; not investment advice.*
+
+
+## Adenda del 20 de noviembre de 2026
+
+[Prospecto definitivo, publicación de la FDA y precio/volumen tras la oferta](../2026-11-20-close.md#medline-mdln--prioridad-máxima).

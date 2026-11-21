@@ -18,3 +18,8 @@ Research snapshots use public information only. They are point-in-time notes, no
 - Do not infer price impact from news alone; record price/volume after the event and compare with market/sector moves.
 - Do not treat an IPO indication or a secondary offering as proof of mispricing.
 - No autonomous trading or order placement is authorized by these research notes.
+
+
+## Cierre del 20 de noviembre de 2026
+
+[Adenda de seguimiento de las cuatro empresas y del piloto NVIDIA](2026-11-20-close.md).
