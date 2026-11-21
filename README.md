@@ -3,7 +3,7 @@
 Evidence-first research system for detecting discrepancies between social attention, verified events, market expectations, and asset prices.
 
 ## Status
-**Specification phase — no trading execution and no autonomous agents deployed.** Implementation is blocked until the owner approves requirements, architecture, data access/licensing, and acceptance criteria.
+**Local Medline research pilot (v0).** The owner approved the v0 design for development and testing. The other agent designs remain specifications. See [how to run the pilot and its verified source limits](docs/pilot/medline-scanner-v0.md).
 
 ## Agent specifications
 - [01 — Social Arbitrage Discovery](docs/agents/01-social-arbitrage-discovery.md)
@@ -36,4 +36,4 @@ Requirements → design → owner approval → data/licensing review → prototy
 NVIDIA is a candidate case study, not a pre-decided bullish or bearish thesis. Any retrospective test must reconstruct what was knowable at each historical timestamp and exclude future information.
 
 ## Current deliverable
-This repository currently contains design/specification documents and public-source research notes. No agent implementation, live data integration, backtest result, or trading capability is claimed.
+The pilot supports manual documents and price/volume inputs, an optional EDGAR metadata adapter, persistent snapshots and reproducible comparison reports. It runs on demand, locally, without an order connector or deployment. The live-source verification status and coverage limits are recorded in the pilot guide.
