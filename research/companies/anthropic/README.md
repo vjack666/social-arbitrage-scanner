@@ -71,3 +71,8 @@ The SEC pricing document confirms a $26B concurrent private placement in Class N
 The IPO is no longer merely proposed: it has been priced and the debut is underway. Strong demand is reported, but opening indications can be volatile and are not a reliable long-term signal. Track actual first-day open/close, turnover, volatility, lock-up terms, dilution, cash generation and compute commitments before drawing conclusions.
 
 *Update appended 2026-11-19; prior IPO-watch note retained as historical context. Public information only; not investment advice.*
+
+
+## Adenda del 20 de noviembre de 2026
+
+[Cierre de la oferta, ejercicio de la opción y primeras dos sesiones](../2026-11-20-close.md#anthropic-ant).

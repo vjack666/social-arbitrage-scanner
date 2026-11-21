@@ -48,3 +48,8 @@ Sources:
 A better combined ratio is a positive underwriting-quality indicator, but it does not offset the need to investigate the declines in revenue, net premiums and net income. Before assessing valuation, extract investment gains/losses, reserve development, ceded premiums/reinsurance and the primary/secondary share split from the S-1. Price range and offer size remain unknown.
 
 *Update appended 2026-11-19; earlier registration-watch conclusion retained. Public information only; not investment advice.*
+
+
+## Adenda del 20 de noviembre de 2026
+
+[Verificación del estado del S-1 y términos aún pendientes](../2026-11-20-close.md#core-specialty-insurance-holdings-core-propuesto).

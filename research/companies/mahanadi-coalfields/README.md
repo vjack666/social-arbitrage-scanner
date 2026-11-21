@@ -49,3 +49,8 @@ Sources:
 The QIB book is covered in the reported snapshot, but total subscription is still below 1x and retail/NII demand is weak at that snapshot. This is mixed demand evidence, not a final verdict; check end-of-day and final-day subscription and compare offer valuation against earnings, production growth, coal prices and policy risks. As a 100% OFS, the event is principally a promoter divestment rather than growth capital for Mahanadi.
 
 *Update appended 2026-11-19; initial unverified watch note retained as historical context. Public information only; not investment advice.*
+
+
+## Adenda del 20 de noviembre de 2026
+
+[Corroboración oficial de la oferta, corrigendum y suscripción del día dos](../2026-11-20-close.md#mahanadi-coalfields).
